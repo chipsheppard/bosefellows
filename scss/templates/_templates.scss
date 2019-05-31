@@ -1,0 +1,171 @@
+@import "css-icons";
+@import "cards";
+@import "callouts";
+@import "inserts";
+@import "float-notes";
+@import "modal-window";
+
+.page-template-default {
+
+  .entry-title {
+    width: 100%;
+    padding: 0 60px;
+  }
+
+  .entry-content {
+    padding: 40px 80px;
+  }
+
+  @include breakpoint(menuswap) {
+    .entry-title {
+      padding: 0;
+    }
+
+    .entry-content {
+      padding: 40px 5%;
+    }
+  }
+}
+
+.nub {
+  background: $color__bosegray;
+  width: 50%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 525px;
+  height: 30px;
+
+  @include breakpoint(menuswap) {
+    display: none;
+  }
+}
+
+
+.borderbox-tr,
+.borderbox-tl {
+  border-top: 2px solid $color__highlight;
+  padding: 20px 7% 0;
+  min-height: 50px;
+
+  @include breakpoint(menuswap) {
+    min-height: 25px;
+    padding: 5px 3.5% 0;
+  }
+}
+
+.borderbox-tr {
+  border-right: 2px solid $color__highlight;
+}
+
+.borderbox-tl {
+  border-left: 2px solid $color__highlight;
+}
+
+.vline {
+  background: $color__highlight;
+  height: 150px;
+  width: 2px;
+}
+
+.hline {
+  background: $color__highlight;
+  height: 9px;
+  width: 12%;
+}
+
+.proj-info {
+  float: left;
+  position: relative;
+  top: -10px;
+  width: 50%;
+}
+
+.shareholder {
+  height: 50px;
+  left: 30%;
+  margin-bottom: 40px;
+  padding: 20px 7% 0;
+  position: absolute;
+  top: 20px;
+  width: 70%;
+  z-index: 2;
+  @include font-size(.875);
+
+  @include breakpoint(menuswap) {
+    border: none;
+    left: 0;
+    padding: 60px 0 20px;
+    position: static;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(phone-h) {
+    padding-top: 30px;
+  }
+
+  a {
+    text-transform: uppercase;
+    border-bottom: 0;
+  }
+
+  .sharelink {
+    float: right;
+    position: relative;
+    top: -12px;
+  }
+
+  .project-status {
+    font-family: $formular-m;
+  }
+}
+
+.page-footer {
+  background: #ffffff;
+  text-align: center;
+  padding: 100px 2.5% 90px;
+
+  @include font-size(1.5);
+  .more a {
+    @include font-size(1);
+  }
+}
+
+.page-template-program,
+.page-template-amar {
+  .page-footer {
+    background: $color__bosegray-drk;
+  }
+}
+
+.hangquote-left {
+  position: relative;
+  width: 0;
+  height: 0;
+
+  &:before {
+    position: absolute;
+    content: '\201C';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    left: -.5em;
+  }
+}
+
+.page-template-amar .page-title .hangquote-left {
+  &:before {
+    left: -40px;
+  }
+}
+
+@import "home";
+@import "home-anim";
+@import "amar";
+@import "news";
+@import "projects";
+@import "program";
+@import "support";
+@import "plato";
+@import "search";

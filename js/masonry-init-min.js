@@ -1,0 +1,1 @@
+jQuery(window).load(function(){var r=document.querySelector(".masonrycards"),e=new Masonry(r,{itemSelector:".card",columnWidth:".card"})});

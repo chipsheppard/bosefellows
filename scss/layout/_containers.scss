@@ -1,0 +1,93 @@
+/*
+
+## Containers
+--------------------- */
+
+.inner-wrap {
+	width: $size__site-main;
+	max-width: $size__site-max;
+	margin: 0 auto;
+	position: relative;
+	@include breakpoint(desktop-s) {
+		padding: 0 50px;
+	}
+	@include breakpoint(tablet-l) {
+		padding: 0 16px;
+	}
+	@include breakpoint(menuswap) {
+		padding: 0 40px;
+	}
+	@include breakpoint(phone-h) {
+		padding: 0 16px;
+	}
+}
+
+.site-content {
+	position: relative;
+	clear: both;
+}
+
+.site-main {
+	float: none;
+	width: $size__site-main;
+}
+
+
+// Sidebar layouts ------------------------------
+.site-content .widget-area {
+	display: inline-block;
+	overflow: hidden;
+	width: $size__site-sidebar;
+}
+
+
+// Full Width (default) -----------------------------------
+.content-area {
+	float: none;
+	margin-left: 0;
+	padding: 0;
+	width: $size__site-main;
+}
+
+// Sidebar Content --------------------
+.sidebar-left .content-area {
+	float: right;
+	margin-bottom: 1.5em;
+	width: $size__site-content;
+}
+.sidebar-left .site-content .widget-area {
+	float: left;
+  margin-bottom: 1.5em;
+  margin-top: 525px;
+}
+
+// Content Sidebar ------------------------------
+.sidebar-right .content-area {
+	float: left;
+	width: $size__site-content;
+}
+.sidebar-right .site-content .widget-area {
+	float: right;
+	margin-top: 570px;
+}
+
+// Stack 'em up for Vertical iPads and smaller
+@include breakpoint(tablet-v) {
+	.content-area,
+	.site-main,
+	.site-content .widget-area,
+	.sidebar-right .content-area,
+	.sidebar-right .site-main,
+	.sidebar-right .site-content .widget-area,
+	.sidebar-left .content-area,
+	.sidebar-left .site-main,
+	.sidebar-left .site-content .widget-area {
+		display:block;
+		float: none;
+		padding: 0;
+		width: $size__site-main;
+	}
+	.sidebar-right .site-content .widget-area {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,107 @@
+/* Featured Image, it's height requirements and it's
+   accompaning gradient shading
+--------------------------------------------------- */
+
+.fi-grad,
+.post-navigation .pnav-link,
+.home-news .news-head {
+	background: linear-gradient(to bottom, rgba(25,25,42,1) 0%,rgba(25,25,42,0) 100%);
+}
+
+.featured-image:after,
+.fi-grad.rev,
+.post-navigation .pnav-head {
+	background: linear-gradient(to top, rgba(25,25,42,1) 0%,rgba(25,25,42,0) 100%);
+}
+
+.fi-grad {
+	position: absolute;
+	height: 150px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	&.rev {
+		top: auto;
+		bottom: 0;
+	}
+}
+
+.featured-image {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $color__base;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	&:after {
+		content:'';
+		width: 100%;
+		height: 35%;
+		position: absolute;
+		bottom:0;
+		left:0;
+		z-index: 1;
+	}
+}
+
+.page-template-program .featured-image:after {
+	height: 100%;
+	background: rgba(25,25,42,.4);
+}
+.page-template-news .featured-image {
+		background-position: center top;
+}
+
+.featured-image,
+.single .entry-header,
+.error404 .page-header,
+.page-template-default .entry-header,
+.page-template-participate .page-header,
+.page-template-program .page-header,
+.page-template-news .q2 {
+	height: 550px;
+	@include breakpoint(phone-h) {
+		height: 429px;
+	}
+}
+
+.home .featured-image,
+.home .page-header {
+	height: 100vh;
+}
+
+.blog .featured-image,
+.blog article:first-of-type .entry-header,
+.archive .featured-image,
+.page-template-news .featured-image,
+.page-template-news .q1,
+.page-template-news .q2.bosepost1,
+.page-template-projects .featured-image,
+.page-template-projects .page-header {
+	height: 720px;
+
+	@include breakpoint(phone-h) {
+		height: 429px;
+	}
+}
+
+.archive article:first-of-type .entry-header {
+	height: 450px;
+
+	@include breakpoint(phone-h) {
+		height: 220px;
+	}
+}
+
+.search .featured-image,
+.search .page-header {
+	height: 410px;
+
+	@include breakpoint(phone-h) {
+		height: 284px;
+	}
+}

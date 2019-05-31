@@ -1,0 +1,47 @@
+/*
+
+# Plugins
+---------------------------------------------
+
+/*
+
+### Add To Any Social Sharing
+----------------------- */
+.addtoany_list a {
+	font-family: $formular-b;
+	color: $color__bosepurp;
+	&:hover {
+		color: $color__highlight;
+	}
+	&:focus {
+		outline: 0;
+	}
+
+	&:after {
+		content: '';
+		display: inline-block;
+		background: url(images/down-arrow.png) no-repeat ;
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top:4px;
+		margin-left: 16px;
+	}
+
+	&.addtoany_no_icon {
+		border-bottom: 2px solid $color__base;
+		&:hover {
+			border-bottom: 2px solid $color__highlight;
+		}
+	}
+}
+
+#a2apage_dropdown .a2a_wide a {
+	display: none;
+}
+
+/*
+
+### Jetpack
+-------------------------------- */
+img#wpstats {display:none;}

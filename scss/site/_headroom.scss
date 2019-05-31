@@ -1,0 +1,101 @@
+/*
+
+HEADROOM
+--------------------------------- */
+.headroom {
+	position:fixed;
+	transition: all 0.5s ease;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+/*
+
+SCROLLED HEADER
+--------------------------- */
+.headroom--not-top.site-header {
+
+/* _site-header.scss ---- */
+	background: #fff;
+	border-bottom: 2px solid $color__highlight;
+
+	.site-title a {
+		&:before {
+			background-image: url('images/logo_shape-dark_1.png');
+		}
+
+		.text {
+			background-image: url('images/logo_text-dark.png');
+		}
+	}
+
+/* _menus.scss ---- */
+	.left-navigation,
+	.right-navigation {
+		a {
+			color: $color__base;
+			border-bottom: 4px solid transparent;
+			padding-bottom: 1.313em;
+		}
+
+		a:hover,
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			color: $color__base;
+			border-bottom: 4px solid $color__highlight;
+		}
+	}
+
+	@include breakpoint(menuswap) {
+		.right-navigation {
+			a {
+				border-bottom: none;
+			}
+
+			a:hover,
+			.current_page_item > a,
+			.current-menu-item > a,
+			.current_page_ancestor > a,
+			.current-menu-ancestor > a {
+				border-bottom: none;
+				color: $color__highlight;
+			}
+		}
+	}
+
+/* _icon.scss ---- */
+	.mobilenav-icon {
+		color: $color__base;
+	}
+
+	.menu-icon,
+	.menu-icon::before,
+	.menu-icon::after {
+	  background-color: $color__base;
+	}
+
+/* _search.scss ---- */
+	.search-icon-wrap {
+	  color: $color__base;
+		background-color: #fff;
+
+		&:hover,
+		&.so {
+			color: $color__highlight;
+		}
+
+		&.so:hover {
+			color: #fff;
+			background-color: $color__highlight;
+			border: solid 2px $color__highlight;
+		}
+	}
+}

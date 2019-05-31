@@ -1,0 +1,28 @@
+
+@mixin breakpoint($point) {
+
+  @if $point == desktop-xl {
+    @media all and (max-width: 1600px) { @content; }
+  }
+  @if $point == desktop-s {
+    @media all and (max-width: 1300px) { @content; }
+  }
+  @if $point == tablet-h {
+    @media all and (max-width: 1025px) { @content; }
+  }
+  @if $point == tablet-l {
+    @media all and (max-width: 801px) { @content; }
+  }
+  @if $point == tablet-v {
+    @media all and (max-width: 769px) { @content; }
+  }
+  @if $point == menuswap {
+    @media all and (max-width: 720px) { @content; }
+  }
+  @if $point == phone-h {
+    @media all and (max-width: 481px) { @content; }
+  }
+  @if $point == phone-v {
+    @media all and (max-width: 321px) { @content; }
+  }
+}

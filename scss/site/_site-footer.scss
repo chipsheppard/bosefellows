@@ -1,0 +1,177 @@
+/* Site Footer
+--------------------------------------------- */
+
+.footer-widgets,
+.site-footer {
+	background-color: #2b2b75;
+	clear: both;
+	color: #ffffff;
+	width: $size__site-main;
+
+	a {
+		display: inline-block;
+		color: #ffffff;
+
+		&:hover {
+			color: $color__xlight;
+		}
+	}
+}
+
+.footer-widgets {
+	padding: 2em 0 0 0;
+}
+
+.site-footer {
+	border-bottom: 4px solid $color__highlight;
+	padding: 2em 0 0 0;
+
+	@include breakpoint(menuswap) {
+		padding-top: 2.5em;
+	}
+}
+
+
+
+.widget-area-1,
+.widget-area-2,
+.widget-area-3 {
+	float: left;
+	width: 50%;
+}
+.widget-area-4 {
+	float: right;
+	width: 50%;
+}
+
+.widget-area-1 {
+	padding-right: 120px;
+
+	@include breakpoint(tablet-h) {
+		padding-right: 60px;
+	}
+
+	@include breakpoint(menuswap) {
+		display: block;
+		float: none;
+		width: $size__site-main;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	img {
+		width: 248px;
+		height: auto;
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 60px;
+
+		@include breakpoint(menuswap) {
+			padding-left: 0;
+		}
+
+		li {
+			float: left;
+			padding: 1.125em 0 0 0;
+			width: 50%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+			@include font-size(.875);
+
+			&:nth-last-child(-n+2) {
+				border-bottom: 0;
+			}
+
+			a {
+				border-bottom: 4px solid transparent;
+				font-family: $formular-m;
+				padding-left: 5px;
+				position: relative;
+				top: 4px;
+				width: 100%;
+
+				&:hover {
+					border-color: $color__highlight;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
+.widget-area-2 {
+	padding-top: 56px;
+	overflow: hidden;
+	@include breakpoint(tablet-l) {
+		padding-top: 66px;
+	}
+
+	@include breakpoint(menuswap) {
+		clear:both;
+		display: block;
+		float: none;
+		width: $size__site-main;
+	}
+
+	a {
+		@include font-size(1);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border-bottom: 2px solid $color__highlight;
+		&:hover {
+			color: #fff;
+			.arrow-right {
+				color: $color__highlight;
+			}
+		}
+	}
+
+	.widget-title {
+		color: #ffffff;
+		line-height: 1.75;
+		@include font-size(2);
+
+		@include breakpoint(tablet-l) {
+			@include font-size(1.563);
+		}
+
+		@include breakpoint(phone-v) {
+			@include font-size(1.5);
+		}
+	}
+}
+
+
+.widget-area-3 {
+	padding-left: 60px;
+	font-family: $formular-i;
+	@include font-size(.75)
+
+	@include breakpoint(menuswap) {
+		padding-left: 0;
+	}
+
+	img {
+		vertical-align: middle;
+		margin-right: .5em;
+	}
+}
+
+.widget-area-4 {
+	text-align: right;
+	padding-right: 60px;
+	@include font-size(.625)
+
+	@include breakpoint(menuswap) {
+		padding-right: 0;
+	}
+
+	img {
+		margin-bottom: 2.5em;
+		width: 113px;
+		height: auto;
+	}
+}

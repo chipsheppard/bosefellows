@@ -1,0 +1,111 @@
+/* Post Formats
+--------------------------------------------- */
+
+.single.single-format-video .wp-post-image {
+	display: none;
+}
+
+.single, .archive, .blog {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		position: relative;
+
+		&:before {
+			display: inline-block;
+			position: absolute;
+			z-index: 2;
+			top: 54px;
+			left: -8px;
+			font-family: $font__icon;
+			background: rgba(0, 0, 0, 0.1);
+			color: $color__base;
+			line-height: 1;
+			padding: 8px;
+			border-radius: 50%;
+			@include font-size(1.25);
+		}
+	}
+
+	.post_format-post-format-aside:before {
+		content: "\f123";
+	}
+	.post_format-post-format-gallery:before {
+		content: "\f161";
+	}
+	.post_format-post-format-link:before {
+		content: "\f103";
+	}
+	.post_format-post-format-image:before {
+		content: "\f128";
+	}
+	.post_format-post-format-quote:before {
+		content: "\f122";
+	}
+	.post_format-post-format-status:before {
+		content: "\f130";
+	}
+	.post_format-post-format-video:before {
+		content: "\f126";
+	}
+	.post_format-post-format-audio:before {
+		content: "\f127";
+	}
+	.post_format-post-format-chat:before {
+		content: "\f125";
+	}
+}
+
+.single {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			top: 90px;
+			left: -40px;
+			color: rgba(255, 255, 255, 0.7);
+			background: rgba(255, 255, 255, 0.2);
+			@include breakpoint(phone-h) {
+				top: 60px;
+				left: -20px;
+				padding: 4px;
+				@include font-size(.688);
+			}
+		}
+	}
+}
+
+.blog {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			top: 16px;
+			left: -40px;
+			@include breakpoint(phone-h) {
+				top: 24px;
+				left: -20px;
+				padding: 4px;
+				@include font-size(.688);
+			}
+		}
+	}
+}

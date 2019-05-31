@@ -1,0 +1,155 @@
+/* Entries
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-content {
+	position: relative;
+}
+
+
+/*
+  ## DEFAULT PAGE
+--------------------------------------------- */
+
+.page-template-default {
+	background: linear-gradient(to right, rgb(233,237,244) 50%,rgb(255,255,255) 50%);
+
+	.nub {
+	  width: 50%;
+		top: 525px;
+		@include breakpoint(phone-h) {
+			top: 404px;
+		}
+	}
+
+	.borderbox-tl {
+		position: absolute;
+		z-index: 1;
+		top: 550px;
+		right: 0;
+		width: 50%;
+		@include breakpoint(phone-h) {
+			top: 429px;
+		}
+	}
+}
+
+/*
+  ## ENTRY CONTENT
+--------------------------------------------- */
+
+.entry-content {
+	position: relative;
+
+	ol {
+		margin-left: 2.5em;
+		margin-bottom: 1.5em;
+
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	.section ul {
+		margin-left: 1em;
+		list-style: none; /* Remove list bullets */
+		padding: 0;
+		margin-bottom: 1.5em;
+
+		li:not(.searchandfilter) {
+			line-height: 1.625;
+			padding: 0 0 12px;
+			position: relative;
+
+			&:before {
+				content: "•";
+		    position: absolute;
+				left: -1em;
+		    color: $color__highlight;
+			}
+		}
+	}
+
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	dt {
+		font-weight: $font__weight-bold;
+	}
+
+	dd {
+		margin: 0 1em 1em;
+	}
+}
+
+/*
+
+### SINGLE POST BLOG
+--------------------------------------------- */
+
+.single {
+	background: linear-gradient(to right, rgb(233,237,244) 32%,rgb(255,255,255) 32%);
+	@include breakpoint(menuswap) {
+		background: none;
+	}
+
+	.nub {
+		width: 32%;
+	}
+
+	.borderbox-tl {
+		position: absolute;
+		z-index: 1;
+		top: 550px;
+		right: 0;
+		width: 68%
+	}
+
+	@include breakpoint(menuswap) {
+		.bg {
+			display: none;
+		}
+	}
+	
+	@include breakpoint(phone-h) {
+		.borderbox-tl {
+			top: 429px;
+			width: 50%
+		}
+	}
+}
+
+.single .entry-content {
+	padding: 100px 15% 100px 37%;
+	position: relative;
+
+	@include breakpoint(menuswap) {
+		padding: 0 0 40px;
+	}
+
+	.intro {
+		font-family: $font__headers;
+		line-height: 1.25;
+		margin-bottom: 60px;
+		@include font-size(1.563);
+	}
+
+	.entry-meta {
+		@include font-size(1);
+
+		.date,
+		.sep,
+		.author {
+			color: $color__bosepurp;
+		}
+	}
+}

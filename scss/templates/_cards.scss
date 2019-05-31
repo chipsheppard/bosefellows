@@ -1,0 +1,298 @@
+/* Archive Cards
+--------------------------------------------- */
+
+.cards-wrap {
+	background-color: $color__bosegray;
+}
+
+.cards {
+	padding: 160px 6% 120px;
+
+	@include breakpoint(tablet-l) {
+		padding: 60px 5%;
+	}
+}
+
+.feat-image { // featured image for cards
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+
+	&:before {
+		content:'';
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		bottom:0;
+		left:0;
+		background: linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+	}
+}
+
+.blog article:not(.bosepost1),
+.archive article:not(.bosepost1),
+.page-template-news article.card,
+.page-template-projects article.card,
+.publications article.card {
+	width: 30.33333333%;
+	float: left;
+	margin: 0 1.5% 25px;
+	position: relative;
+	background-color: #fff;
+
+	&:hover {
+		box-shadow: 1px 1px 8px rgba(0, 0, 0, .3);
+
+		.project-title {
+			color: $color__navy;
+
+			span {
+				border-color: $color__highlight;
+			}
+		}
+	}
+
+	a:hover {
+		color: $color__navy;
+	}
+
+	@include breakpoint(tablet-h) {
+		width: 47%;
+	}
+
+	@include breakpoint(menuswap) {
+		width: 100%;
+		margin: 0 0 25px;
+	}
+
+	.feat-image {
+		margin-bottom: 26px;
+		height: 180px;
+	}
+
+	.entry-meta,
+	.entry-title,
+	.more {
+		padding: 0 40px;
+
+		@include breakpoint(menuswap) {
+			padding: 0 20px;
+		}
+	}
+
+	.entry-title {
+		@include font-size(1.563);
+
+		a {
+			color: $color__navy;
+
+			&:hover {
+				color: $color__highlight;
+			}
+		}
+	}
+
+	.more {
+		position: absolute;
+		top: 125px;
+		z-index: 2;
+	}
+
+	.entry-header.nofi {
+		padding-top: 60px;
+
+		.entry-title {
+			a {
+				color: $color__highlight;
+
+				&:hover {
+					color: $color__navy;
+				}
+			}
+		}
+
+		.more {
+			position: static;
+			display: block;
+			margin-top: 40px;
+
+			a {
+				border-color: $color__navy;
+				color: $color__highlight;
+				@include font-size(1);
+
+				&:hover {
+					border-color: $color__highlight;
+					color: $color__navy;
+				}
+			}
+		}
+	}
+
+	.entry-footer {
+		border-bottom: 3px solid $color__navy;
+		padding: 40px 25px 0 0;
+		text-align: right;
+
+		.tag-links {
+			padding: 0;
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+
+.blog article,
+.archive article,
+.page-template-news article.card {
+	.entry-header {
+		min-height: 365px;
+
+		&.nofi {
+			min-height: 365px;
+
+			@include breakpoint(menuswap) {
+				min-height: auto;
+			}
+		}
+
+		@include breakpoint(menuswap) {
+			min-height: auto;
+		}
+	}
+}
+
+article.card.type-post,
+article.card.masonry-brick,
+.archive article.type-post {
+  .more {
+    a {
+      color: #fff;
+      border-color: $color__highlight;
+
+      &:hover {
+        border-color: $color__navy;
+      }
+    }
+  }
+}
+
+
+.blog article:not(.bosepost1).type-project,
+.archive article:not(.bosepost1).type-project,
+article.card.type-project,
+.archive article.type-project {
+
+	.feat-image { // featured image for Project cards
+		border-radius: 50%;
+		box-sizing: content-box;
+		border: 2px solid #e9edf4;
+		width: 130px;
+		height: 130px;
+		overflow: hidden;
+		margin: -50px auto 20px;
+
+		&:before {
+			display: none;
+			content: none;
+		}
+	}
+
+	.more {
+		position: static;
+		display: block;
+		margin-top: 40px;
+	}
+}
+
+.archive article.type-project {
+	margin-top: 50px;
+
+	.more {
+		margin-top: 25px;
+		position:static;
+	}
+}
+
+.blog article:first-of-type,
+.archive article:first-of-type {
+	.entry-meta,
+	.entry-title,
+	.more {
+
+		@include breakpoint(tablet-l) {
+			padding: 0 16px;
+		}
+
+		@include breakpoint(menuswap) {
+			padding: 0 10px;
+		}
+	}
+}
+
+
+.publications article.card {
+	width: 47%;
+	background-color: #f3f5f9;
+
+	@include breakpoint(menuswap) {
+		width: 100%;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+	}
+
+	&:nth-of-type(odd) {
+		clear: both;
+	}
+
+	.feat-image {
+		margin-bottom: 26px;
+		height: 180px;
+	}
+
+	.entry-meta {
+		color: $color__navy;
+		padding: 0 20px 20px;
+		@include font-size(.75);
+	}
+
+	.entry-title {
+		padding: 0 20px;
+		width: 100%;
+	}
+
+	.more {
+		padding: 0 20px;
+		top: 130px;
+
+		a {
+			border-color: #fff;
+			color: #fff;
+			@include font-size(1);
+
+			&:hover {
+				border-color: $color__xlight;
+				color: $color__xlight;
+			}
+		}
+	}
+
+	.entry-header {
+		padding: 0 0 40px;
+		height: auto;
+	}
+
+	.entry-header.nofi {
+		padding: 40px 0;
+		height: auto;
+	}
+
+	.entry-footer {
+		padding: 0 25px 0 0;
+	}
+
+} // .publications

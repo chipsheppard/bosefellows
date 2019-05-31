@@ -1,0 +1,218 @@
+/* News
+--------------------------------------------- */
+.page-template-news {
+
+	.entry-content {
+		border: 0;
+	}
+
+	.cards-wrap {
+		margin-top: -80px;
+
+		@include breakpoint(menuswap) {
+			margin-top: 0;
+		}
+	}
+
+	.q1,
+	.q2 {
+		color: #fff;
+
+		a,
+		.entry-title a {
+			color: #fff;
+		}
+
+		.entry-title,
+		.entry-meta,
+		.more {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	.q1 {
+		padding-top: 480px;
+
+		.entry-title,
+		.entry-meta,
+		.more {
+			padding: 0 64px;
+
+			@include breakpoint(menuswap) {
+				padding: 0 7.5%;
+			}
+		}
+
+		.entry-meta {
+			@include font-size(1);
+		}
+
+		.entry-title {
+			margin: 5px 0 20px;
+			width: 60%;
+			@include font-size(2);
+		}
+
+		@include breakpoint(tablet-l) {
+			padding-top: 360px;
+
+			.entry-title {
+				width: 80%;
+			}
+		}
+
+		@include breakpoint(phone-h) {
+			padding-top: 220px;
+
+			.entry-title,
+			.entry-meta,
+			.more {
+				padding: 0 20px;
+			}
+
+			.entry-meta {
+				@include font-size(1);
+			}
+
+			.entry-title {
+				width: 100%;
+				@include font-size(1.563);
+			}
+		}
+	}
+
+
+	.q2 {
+		width: 50%;
+		float:left;
+		padding: 370px 0 0 60px;
+
+		.entry-title {
+			margin: .5em 0;
+			width: 60%;
+			@include font-size(1.563);
+		}
+
+		&.bosepost1 {
+			padding: 540px 0 0 60px;
+		}
+
+		@include breakpoint(tablet-l) {
+			padding-top: 340px;
+
+			.entry-title {
+				width: 100%;
+			}
+
+			&.bosepost1 {
+				padding: 500px 30px 0;
+			}
+		}
+
+		@include breakpoint(tablet-h) {
+			padding: 300px 30px 0;
+
+			.entry-title {
+				width: 100%;
+			}
+
+			&.bosepost1 {
+				padding: 500px 30px 0;
+			}
+		}
+
+		@include breakpoint(phone-h) {
+			width: 100%;
+			float:none;
+			padding: 290px 5% 0;
+
+			.entry-title {
+				@include font-size(1);
+			}
+
+			&.bosepost1 {
+				padding: 290px 5% 0;
+			}
+		}
+	}
+
+	//.q5,
+	//.q4,
+	.q3 {
+		&:nth-of-type(2) {
+			margin-top: 80px;
+
+			@include breakpoint(tablet-h) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.news-filter {
+		float: right;
+		display:inline-block;
+		padding: 0 40px;
+		position: relative;
+		top: -125px;
+		width: 40%;
+		z-index: 3;
+
+		@include breakpoint(menuswap) {
+			float:none;
+			margin: 0 auto;
+			top: 40px;
+			width: auto;
+		}
+
+		.post_tags ul {
+			background: $color__bosegray;
+		}
+	}
+
+
+// NOT NEEDED ???
+	.bosequote-insert {
+
+		.text-overlay {
+		left: 50%;
+
+			@include breakpoint(tablet-h) {
+				left: 30%;
+			}
+
+			@include breakpoint(tablet-l) {
+				left: 10%;
+			}
+		}
+	}
+
+// MORE CARDS
+	.premore {
+		margin-bottom: 0;
+		padding-top: 150px;
+
+		@include breakpoint(desktop-s) {
+			padding-top: 180px;
+		}
+
+		@include breakpoint(menuswap) {
+			padding-top: 0;
+		}
+	}
+
+	.morecards {
+		visibility: hidden; // so masonry will work!!
+	}
+
+  	// searchandfilter Form
+	.searchandfilter {
+		display: inline-block;
+		padding: 15px;
+
+		@include breakpoint(menuswap) {
+			display: block;
+			padding: 0;
+		}
+	}
+}

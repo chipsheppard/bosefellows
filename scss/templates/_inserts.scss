@@ -1,0 +1,180 @@
+// Bose Insert
+.bosequote-insert {
+	position: relative;
+	z-index: 2;
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+  .borderbox-tr,
+  .borderbox-tl {
+    width: 50%;
+
+    @include breakpoint(tablet-h) {
+      width: 30%;
+    }
+
+    @include breakpoint(tablet-l) {
+      display: none;
+    }
+  }
+
+  .text-overlay {
+    right: 50%;
+    background-color: #fff;
+    font-family: $font__headers;
+    padding: 40px;
+    width: 42%;
+    position: absolute;
+    z-index: 2;
+    top: 70%;
+    @include font-size(2);
+
+    @include breakpoint(desktop-s) {
+      @include font-size(1.75);
+    }
+
+    @include breakpoint(tablet-h) {
+      right: 30%;
+      width: 60%;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoint(tablet-l) {
+      padding: 24px;
+      width: 80%;
+      left: 10%;
+    }
+
+    @include breakpoint(menuswap) {
+      position: relative;
+      top: -60px;
+    }
+
+	@include breakpoint(phone-h) {
+      @include font-size(1.5);
+    }
+	@include breakpoint(phone-v) {
+      @include font-size(1.25);
+    }
+
+  }
+} // .bosequote-insert
+
+
+.quote-insert,
+.images-insert {
+  position: relative;
+  width: 209%;
+  margin-left: -77.5%;
+  margin-top: 100px;
+  position: relative;
+  z-index: 3;
+
+  @include breakpoint(menuswap) {
+    width: 116%;
+    margin-left: -8%;
+    margin-bottom: 0;
+  }
+}
+
+.quote-insert {
+  background-color: $color__base;
+  color: #ffffff;
+  margin-bottom: 60px;
+  padding: 90px 89% 80px 10%;
+  @include font-size(1.563);
+
+  @include breakpoint(tablet-h) {
+    padding: 40px 100% 20px 5%;
+    @include font-size(1.25);
+
+    .image-caption {
+      top: 40px;
+    }
+  }
+
+  @include breakpoint(tablet-v) {
+    @include font-size(1);
+  }
+
+  @include breakpoint(menuswap) {
+    padding-right: 50%;
+  }
+
+  @include breakpoint(phone-h) {
+    padding: 40px 10%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .image-caption {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    width: 37%;
+
+    @include breakpoint(phone-h) {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: auto;
+    }
+
+    .caption {
+      width: 150px;
+      margin: 0 auto 20px;
+      @include font-size(.75);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+.images-insert {
+  text-align: right;
+  margin-bottom: 100px;
+
+  .caption {
+    background-color: $color__bosegray;
+    float: left;
+    text-align: left;
+    width: 16%;
+    margin: 50px 0 0 5%;
+    @include font-size(.75);
+  }
+
+  img {
+    display: inline-block;
+    margin-left: 1%;
+  }
+
+  .img1 {width: 32.421875% } // 415x265
+  .img2 {width: 18.75%;} // 240x265
+  .img3 {width: 21.875%;} // 280x265
+
+  @include breakpoint(tablet-h) {
+    .caption {
+      margin-top: 10px;
+    }
+  }
+
+  @include breakpoint(phone-h) {
+    .caption,.img2,.img3 {
+      display: none;
+    }
+
+    .img1 {
+      width: 100%;
+    }
+  }
+}

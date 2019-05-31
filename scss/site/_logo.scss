@@ -1,0 +1,95 @@
+/* Menu for TOP of page, pre scroll */
+.site-title a {
+	&:before {
+		background-image: url('images/logo_shape-white_1.png');
+  }
+	.text {
+		background-image: url('images/logo_text-white.png');
+  }
+}
+
+/* Menu Down and Floaty */
+.headroom--not-top.site-header {
+	.site-title a {
+		&:before {
+			background-image: url('images/logo_shape-dark_1.png');
+		}
+		.text {
+			background-image: url('images/logo_text-dark.png');
+		}
+	}
+}
+
+.page-template-projects,
+.single-project {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_2.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_2.png');
+	}
+}
+
+.page-template-program {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_3.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_3.png');
+	}
+}
+
+.page-template-amar {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_4.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_4.png');
+	}
+}
+
+.page-template-news,
+.single-post {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_5.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_5.png');
+	}
+}
+
+.page-template-participate {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_6.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_6.png');
+	}
+}
+
+.page-template-default { // Contact
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_7.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_7.png');
+	}
+}
+
+.search {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_8.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_8.png');
+	}
+}
+
+.archive {
+	.site-title	a:before {
+		background-image: url('images/logo_shape-white_9.png');
+	}
+	.headroom--not-top.site-header .site-title	a:before {
+		background-image: url('images/logo_shape-dark_9.png');
+	}
+}

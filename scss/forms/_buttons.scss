@@ -1,0 +1,83 @@
+/*
+
+ ## Buttons
+--------------------- */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: $color__highlight;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	line-height: normal;
+	padding: .75em 1em;
+	position: relative;
+	white-space: normal;
+	width: auto;
+	@include font-size(.875);
+
+	&:hover {
+		background-color: $color__base;
+		color: #fff;
+	}
+
+	&:focus,
+	&:active {
+		outline: 0;
+		background-color: #000;
+	}
+
+	&.alt {
+		background-color: $color__med;
+		&:hover {
+			background-color: $color__base;
+		}
+		&:focus,
+		&:active {
+			outline: 0;
+			background-color: #000;
+		}
+	}
+
+	&.dark {
+		background-color: $color__base;
+
+		&:hover {
+			background-color: $color__highlight;
+		}
+
+		&:focus,
+		&:active {
+			outline: 0;
+			background-color: #000;
+		}
+	}
+
+	&.big {
+		@include font-size(1.125);
+		padding: 1em 3em;
+
+		&:after {
+			display: inline-block;
+	  	content:"->";
+	  	margin-left: .313em;
+		}
+		
+		@include breakpoint(tablet-h) {
+			padding: .75em 2.5em;
+		}
+	}
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}
+
+.button {
+	display: inline-block;
+}

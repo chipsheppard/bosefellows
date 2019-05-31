@@ -1,0 +1,76 @@
+/*
+
+## Links
+--------------------------------------------- */
+
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.single-project .section:not(.publications) a,
+.single-post .entry-content a {
+	border-bottom: 1px solid $color__highlight;
+}
+
+
+// MORE BUTTON ------------------------------
+.more {
+	font-family: $formular-m;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	a {
+		color: $color__highlight;
+		border-bottom: 2px solid $color__base;
+		padding: 4px;
+		overflow: hidden;
+		white-space: nowrap;
+
+		&:hover {
+			color: $color__base;
+			border-bottom: 2px solid $color__highlight;
+		}
+	}
+
+	&.white a {
+		color: #fff;
+		border-color: $color__highlight;
+
+		&:hover {
+			border-color: $color__base;
+		}
+	}
+}
+
+.view-more {
+  margin-bottom: 40px;
+  text-align: center;
+  @include font-size(1);
+
+  .more {
+    .vl { // view-less
+      display: none;
+    }
+  }
+}

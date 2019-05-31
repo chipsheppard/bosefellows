@@ -1,0 +1,175 @@
+/*
+
+## Both Responsive Menu Icons
+---------------------------------- */
+
+.mobilenav-icon-home,
+.mobilenav-icon {
+	background: none;
+	cursor: pointer;
+	position: absolute;
+	overflow: visible;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+	z-index: 999;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: none;
+	}
+
+	@include breakpoint(phone-v) {
+		top: 18px;
+	}
+}
+
+
+/*
+### GLOBAL Menu "More/Less" link
+------------------------------------ */
+.mobilenav-icon {
+	border-radius: 0;
+	border-top: 2px solid transparent;
+	color: #fff;
+	padding: .875em 1.75em .875em .75em;
+	right: 0;
+	top: 66px;
+
+	@include breakpoint(phone-v) {
+	  top: 42px;
+	}
+
+	&:before {
+		content: 'More';
+	}
+	&:after {
+		content: '';
+	  position: absolute;
+	  border-top: solid 1px currentColor;
+	  border-right: solid 1px currentColor;
+	  width: 6px;
+	  height: 6px;
+		right: 12px;
+	  top: 15px;
+	  transform: rotate(135deg);
+	}
+
+}
+
+/*
+#### Global Activated
+------------------------------------- */
+.menu-active .mobilenav-icon {
+	background-color: #fff;
+	color: $color__base;
+	padding-right: 1.688em;
+	border-top: 2px solid $color__highlight;
+
+	&:before {
+		content: 'Less';
+	}
+	&:after {
+		right: 12px;
+	  top: 19px;
+	  transform: rotate(-45deg);
+	}
+}
+
+
+
+/*
+### Home Pre-Anim Hamburger link
+------------------------------------- */
+.mobilenav-icon-home {
+	right: 0;
+	top:0;
+
+	.menu-icon-wrap {
+	  width: 30px;
+	  height: 24px;
+		padding: 23px 0;
+	  display: inline-block;
+
+		@include breakpoint(phone-h) {
+			width: 20px;
+			height: 16px;
+		}
+	}
+
+	.menu-icon,
+	.menu-icon::before,
+	.menu-icon::after {
+	  width: 30px;
+	  height: 2px;
+	  background-color: #fff;
+	  position: absolute;
+	  transition-property: transform;
+	  transition-duration: 0.15s;
+	  transition-timing-function: ease;
+	}
+	.menu-icon::before,
+	.menu-icon::after {
+	  content: "";
+	  display: block;
+	}
+	.menu-icon::before {
+	  top: -9px;
+	}
+	.menu-icon::after {
+	  bottom: -9px;
+	}
+}
+
+
+/*
+#### Hamburger Spin setup
+---------------------------*/
+.menu-icon {
+transition-duration: 0.3s;
+transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.menu-icon::before {
+  transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
+}
+.menu-icon::after {
+  transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/*
+#### Hamburger SPIN
+--------------------------- */
+.menu-active {
+	.mobilenav-icon-home {
+		background-color: #fff;
+		border-top: 3px solid $color__highlight;
+		border-radius: 0;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: #fff;
+		}
+	}
+	.menu-icon,
+	.menu-icon::before,
+	.menu-icon::after {
+	  background-color: $color__base;
+	}
+	.menu-icon {
+		transform: rotate(225deg) scale(.75);
+		transition-delay: 0.14s;
+		transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	.menu-icon::before {
+	  top: 0;
+	  opacity: 0;
+	  transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
+	}
+	.menu-icon::after {
+	  bottom: 0;
+	  transform: rotate(-90deg);
+	  transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+}

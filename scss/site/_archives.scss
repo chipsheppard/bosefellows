@@ -1,0 +1,84 @@
+/*
+
+Archives  & the BLOG
+--------------------------------------------- */
+
+.blog,
+.archive {
+	background-color: $color__bosegray;
+
+	.content-area .inner-wrap {
+		padding-left: 65px;
+		padding-right: 60px;
+
+		@include breakpoint(menuswap) {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+
+	.entry-content,
+	.entry-summary {
+		margin: .5em 0 0;
+	}
+	
+	.wp-post-image {
+		margin-top: .5em;
+	}
+
+	article:first-of-type {
+		width: 100%;
+		margin-bottom: 40px;
+		margin-top: 0;
+
+		&:hover {
+			box-shadow: none;
+		}
+
+		.entry-meta {
+			color: #fff;
+		}
+
+		.entry-content {
+			display: none;
+		}
+
+		.more {
+			padding-bottom: 10px;
+			position: relative;
+			top: auto;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	article:nth-of-type(3n+5) {
+		clear: both;
+	}
+
+	@include breakpoint(tablet-h) {
+		article:nth-of-type(3n+5) {
+			clear: none;
+		}
+
+		article:nth-of-type(2n+4) {
+			clear: both;
+		}
+	}
+}
+
+.archive .no-results {
+	.page-header {
+		height: 720px;
+
+		@include breakpoint(phone-h) {
+			height: 429px;
+		}
+	}
+
+	.page-content {
+		padding: 5%;
+	}
+}

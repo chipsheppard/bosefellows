@@ -1,0 +1,22 @@
+/*
+
+## ENTRY META
+----------------------- */
+.entry-meta {
+  margin: 0 0 4px 0;
+  @include font-size(.75);
+
+  .posted-on {
+    margin-right: 8px;
+  }
+
+  .byline,
+  .updated:not(.published){
+    display: none;
+  }
+
+  .single .byline,
+  .group-blog .byline {
+    display: inline;
+  }
+}

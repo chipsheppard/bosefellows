@@ -1,0 +1,271 @@
+/*
+
+Program
+--------------------------------------------- */
+.page-template-program {
+
+	background: linear-gradient(to right, rgb(233,237,244) 32%,rgb(255,255,255) 32%);
+
+	@include breakpoint(menuswap) {
+		background: none;
+	}
+
+	.borderbox-tr {
+		position: absolute;
+		z-index: 1;
+		top: 550px;
+		left: 0;
+		width: 50%;
+
+	    @include breakpoint(phone-h) {
+	  		top: 429px;
+	  	}
+	}
+
+	.entry-content {
+		position: relative;
+	}
+
+	.page-header {
+		padding-left: 60px;
+		padding-top: 200px;
+
+		@include breakpoint(menuswap) {
+			padding-left: 0;
+			padding-top: 300px;
+		}
+	}
+
+	.page-title {
+		color: #fff;
+		padding-right: 20%;
+		@include font-size(4.313);
+
+		@include breakpoint(tablet-h) {
+			@include font-size(3);
+		}
+
+		@include breakpoint(menuswap) {
+			padding-right: 0;
+		}
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.563);
+		}
+	}
+
+	.intro-block {
+		background: #fff;
+		padding: 40px 4% 20px;
+		position: absolute;
+		top: -80px;
+		left: 50%;
+		width: 40%;
+		@include font-size(1.563);
+
+		@include breakpoint(tablet-l) {
+			width: 45%;
+		}
+
+		@include breakpoint(menuswap) {
+			position: relative;
+			top: auto;
+			left: auto;
+			width: 100%;
+			padding: 40px 0 0;
+		}
+	}
+
+	.status_tags {
+		background-color: $color__bosegray;
+		// z-index: 10 !important;
+
+		@include breakpoint(tablet-h) {
+			background: none;
+			z-index: auto;
+		}
+
+	}
+
+	.left-col {
+		@include breakpoint(menuswap) {
+			padding: 0 5%;
+		}
+	}
+
+	.section {
+		color: $color__dark;
+		padding: 100px 7.5% 60px 3%;
+		@include font-size(.983);
+
+		&.s2 {
+			@include breakpoint(tablet-v) {
+				padding-top: 0;
+			}
+		}
+		&.s3 {
+			padding-top: 20px;
+			padding-bottom: 40px;
+		}
+		&.s4 {
+			padding-top: 0;
+		}
+		&.s6 {
+			padding-top: 50px;
+		}
+
+		ul {
+		  @include font-size(1.125);
+		}
+
+
+		@include breakpoint(menuswap) {
+			padding: 40px 0;
+		}
+
+		.heading {
+			color: $color__base;
+			font-family: $font__headers;
+			margin-bottom: 16px;
+			@include font-size(1.063);
+		}
+
+		h2 {
+			margin-bottom: 40px;
+			@include font-size(1.563);
+		}
+
+		a:not(.ml) {
+			border-bottom: 1px solid $color__highlight;
+			padding-bottom: 2px;
+		}
+		a.ml {
+			@include font-size(.875);
+		}
+	}
+
+	.images-insert {
+		width: 100%;
+		margin: 0 0 25px 0;
+
+		@include breakpoint(menuswap) {
+			width: 100%;
+		}
+
+		.img2 {
+			width: 32.421875%;
+		}
+	}
+
+	.callout {
+		//background: none;
+		text-align: center;
+
+		&.co1 {
+			margin-top: 150px;
+		}
+
+		&.co2 {
+			margin-top: 50px;
+			position: relative;
+			left: -100px;
+		}
+		&.co4 {
+			margin-top: 150px;
+			position: relative;
+			left: -80px;
+		}
+
+		.arrow-r {
+			a {
+				@include playbutt(16px);
+				display: inline-block;
+				border-left-color: $color__base;
+
+				&:before {
+					border-color: $color__base;
+				}
+			}
+		}
+
+		@include breakpoint(desktop-s) {
+			&.co2 {
+				left: -50px;
+			}
+		}
+
+		@include breakpoint(tablet-h) {
+			&.co2,
+			&.co4 {
+				left: 0;
+				display: block;
+				float: none;
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(menuswap) {
+			&.co1,
+			&.co2,
+			&.co4 {
+				padding-top: 0;
+			}
+		}
+	}
+
+
+	.bosequote-insert {
+		margin-bottom: 220px;
+
+		@include breakpoint(menuswap) {
+			margin-bottom: 40px;
+		}
+		.vid-citation {
+			margin-top: 1em;
+			@include font-size(1.25);
+
+			@include breakpoint(phone-h) {
+			  @include font-size(1);
+			}
+		}
+
+		.borderbox-tl {
+			float: right;
+		}
+
+		.trigger {
+			position: absolute;
+			top: 75%;
+			right: 35%;
+
+			@include breakpoint(desktop-s) {
+				top: 70%;
+				right: 30%;
+			}
+			@include breakpoint(tablet-h) {
+				top: 70%;
+				right: 5%;
+			}
+			@include breakpoint(tablet-l) {
+				top: 10%;
+			}
+			@include breakpoint(phone-h) {
+				top: 0;
+			}
+
+			a:hover {
+				opacity: .9;
+			}
+		}
+		.trigger-text {
+			font-weight: $font__weight-bold;
+			color: #ffffff;
+			border-bottom: 3px solid $color__highlight;
+			text-transform: uppercase;
+			vertical-align: middle;
+			position: relative;
+			padding-bottom: 4px;
+			top: -30px;
+		}
+	}
+}

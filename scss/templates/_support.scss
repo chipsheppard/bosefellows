@@ -1,0 +1,169 @@
+/*
+Support (was participate)
+--------------------------------------------- */
+.page-template-support {
+
+	.page-header {
+		padding-left: 54%;
+		padding-top: 260px;
+		height: 550px;
+
+		@include breakpoint(menuswap) {
+			padding-left: 5%;
+		}
+
+		@include breakpoint(phone-h) {
+			padding-top: 220px;
+			height: 429px;
+		}
+	}
+
+	.page-title {
+		color: #fff;
+		@include font-size(4.313);
+
+		@include breakpoint(phone-h) {
+			@include font-size(3);
+		}
+	}
+
+	.borderbox-tl {
+		position: absolute;
+		z-index: 1;
+		top: 550px;
+		right: 0;
+		width: 50%;
+
+		@include breakpoint(phone-h) {
+			top: 429px;
+		}
+	}
+
+	.intro-block {
+		background: #fff;
+		padding: 60px 5% 20px;
+		position: absolute;
+		top: -80px;
+		right: 50%;
+		width: 40%;
+		@include font-size(1.125);
+
+		@include breakpoint(tablet-h) {
+			width: 50%;
+		}
+
+		@include breakpoint(menuswap) {
+			position: relative;
+			top: auto;
+			right: auto;
+			width: 100%;
+			padding: 40px 5% 0;
+		}
+	}
+
+	.entry-content .inner-wrap {
+		@include breakpoint(desktop-s) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.top-insert {
+		float: right;
+		padding-top: 60px;
+		width: 50%;
+
+		@include breakpoint(menuswap) {
+			width: 100%;
+			padding: 30px 5%;
+		}
+
+		h6 {
+			margin-top: 24px;
+		}
+
+		.more {
+			margin-top: 32px;
+			@include font-size(1);
+		}
+
+		.letter {
+			margin-bottom: 12px;
+			margin-right: 24px;
+			float: right;
+
+			@include breakpoint(menuswap) {
+				float: none;
+				margin: 0;
+			}
+		}
+	}
+
+  .content-block {
+    position: relative;
+
+    .image {
+      margin-top: 200px;
+      width: 53%;
+
+      @include breakpoint(menuswap) {
+        margin-top: 25px;
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .borderbox-tr {
+      width: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .title {
+      font-family: $font__headers;
+      line-height: 1;
+      margin-bottom: 200px;
+      text-align: right;
+      width: 46%;
+      @include font-size(3.5);
+
+      @include breakpoint(menuswap) {
+        background: $color__bosegray;
+        margin: -25px 0 0;
+        padding: 50px 5% 15px;
+        position: static;
+        text-align: left;
+        width: 100%;
+        @include font-size(2.5);
+      }
+    }
+
+    .text {
+      background: $color__bosegray;
+      padding: 80px 50px 40px 80px;
+      width: 45%;
+      position: absolute;
+      z-index: 1;
+      top: 35%;
+      left: 50%;
+      @include font-size(1.125);
+
+      @include breakpoint(tablet-h) {
+        top: 20%;
+        padding-left: 60px;
+      }
+
+      @include breakpoint(menuswap) {
+        position: static;
+        width: 100%;
+        padding: 0 5% 80px;
+      }
+    }
+  }
+}

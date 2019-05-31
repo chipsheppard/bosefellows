@@ -1,0 +1,31 @@
+/* Utility
+--------------------------------------------- */
+
+@media only screen and (min-width:1024px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+@include breakpoint(menuswap) {
+	.deskpad-only {
+		display: none;
+	}
+}
+
+@include breakpoint(tablet-h) {
+	.desktop-only {
+		display: none;
+	}
+}
+
+.ta-center {
+	text-align: center;
+}
+
+.ltgray {
+	color: $color__light;
+}
+.color-navy {
+	color: $color__navy;
+}

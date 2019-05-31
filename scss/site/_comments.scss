@@ -1,0 +1,82 @@
+/* Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	margin: 40px 0;
+}
+
+.comments-area {
+	margin: 32px 0;
+}
+
+.comments-title {
+	@include font-size(1.25);
+}
+
+.comment-content {
+	clear: both;
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%
+}
+
+.comment-respond {
+
+	#cancel-comment-reply-link {
+		background-color: $color__xxlight;
+		padding: 0.625em 1.125em;
+		@include font-size(.875);
+		&:hover {
+			background-color: $color__xxxlight;
+		}
+	}
+
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.comment-list li,
+.ping-list li {
+	list-style-type: none;
+}
+
+.comment-list li {
+	margin-top: 24px;
+	padding: 32px;
+	border-radius: 12px;
+	background-color: $color__xxxlight;
+
+	li {
+		background-color: #ffffff;
+		li {
+			background-color: $color__xxxlight;
+			li {
+				background-color: #ffffff;
+				li {
+					background-color: $color__xxxlight;
+				}
+			}
+		}
+	}
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+.comment-edit-link,
+.says {
+	display: none;
+}

@@ -1,0 +1,1191 @@
+/*
+
+Amar
+--------------------------------------------- */
+.page-template-amar {
+
+	@include breakpoint(tablet-h) {
+		.col-1-2 {
+			float:none;
+			display:block;
+			margin:0;
+			width:100%;
+		}
+	}
+
+	@include breakpoint(menuswap) {
+		.site-content .inner-wrap {
+			padding: 0;
+		}
+	}
+
+	.bgvid-wrap,
+	.bgvid,
+	.page-header {
+		height: 780px;
+
+		@include breakpoint(phone-h) {
+			  height: 429px;
+		}
+	}
+
+	.bgvid-wrap {
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		height: 780px;
+
+		@include breakpoint(phone-h) {
+			height: 429px;
+		}
+	}
+
+	.bgvid {
+		top: 0;
+		left: 0;
+		-o-object-fit: cover;
+		object-fit: cover;
+		overflow: hidden;
+		position: absolute;
+		width: 100vw;
+		z-index: -100;
+	}
+
+	.page-header {
+		padding-top: 270px;
+
+		@include breakpoint(tablet-h) {
+			padding-top: 300px;
+		}
+
+		@include breakpoint(menuswap) {
+			padding-left: 40px;
+		}
+
+		@include breakpoint(phone-h) {
+			padding-top: 150px;
+		}
+	}
+
+	.page-title {
+		color: #fff;
+		padding: 0 5% 50px 30%;
+		@include font-size(4.313);
+
+		@include breakpoint(desktop-s) {
+			@include font-size(3.75);
+		}
+
+		@include breakpoint(tablet-h) {
+			@include font-size(3);
+		}
+
+		@include breakpoint(menuswap) {
+			padding: 0 5% 60px;
+			@include font-size(2.5);
+		}
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.563);
+			padding-bottom: 30px;
+		}
+	}
+
+	.name {
+		color: #fff;
+		text-align: center;
+	}
+
+	.borderbox-tl {
+		float: right;
+		width: 50%;
+		position: relative;
+		z-index: 2;
+	}
+
+	.section {
+		position: relative;
+
+		a {
+			border-bottom: 1px solid #1439ff;
+		    padding-bottom: 2px;
+		}
+
+	    img {
+			display: block;
+
+			@include breakpoint(phone-h) {
+				width: 100%;
+				height: auto;
+			}
+	    }
+
+	    h2.heading {
+			text-align: center;
+			@include font-size(1.063);
+	    }
+
+	    .title {
+			p {
+				margin: 0;
+			}
+	    }
+
+		.vline {
+			height: 200px;
+			margin-left: 50%;
+			margin-top: 20px;
+			position: relative;
+			z-index: 2;
+
+				@include breakpoint(phone-h) {
+					height: 100px;
+				}
+			}
+		}
+
+		.trigger {
+			position: absolute;
+			z-index: 5;
+			color: #fff;
+			display: inline-block;
+		}
+
+		.caption,
+		.cap,
+		.cap1,
+		.cap2 {
+			line-height: 1.25;
+			@include font-size(.875);
+		}
+
+// S ONE ------------------------------
+  .s-one {
+    background: linear-gradient(to right, rgb(255,255,255) 50%,rgb(233,237,244) 50%);
+
+    .fakenews {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 120px solid #fff;
+
+      @include breakpoint(tablet-h) {
+        border-width: 100px;
+      }
+
+      @include breakpoint(tablet-l) {
+        border-width: 70px;
+      }
+
+      @include breakpoint(menuswap) {
+        display:none;
+      }
+
+      &.bot {
+        top: auto;
+        bottom: 0;
+        border-width: 60px;
+
+        @include breakpoint(desktop-s) {
+          border-width: 40px;
+        }
+
+        @include breakpoint(menuswap) {
+          display:inline;
+          border-width: 20px;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      margin: 80px 0 0 7%;
+      width: 52%;
+      z-index: 2;
+
+      @include breakpoint(menuswap) {
+        width: 98%;
+        margin: 40px 2% 0 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .title {
+        bottom: 25px;
+        color: #fff;
+        position: absolute;
+        right: 6%;
+        z-index: 3;
+        @include font-size(2.5);
+
+        @include breakpoint(phone-h) {
+          bottom: 5px;
+          @include font-size(1.563);
+        }
+      }
+    }
+    .hline {
+      margin: 0 0 20px 44%;
+      position: relative;
+      z-index: 2;
+
+      @include breakpoint(menuswap) {
+        float: right;
+        width: 40%;
+        margin: 0 2% 20px 0;
+      }
+    }
+    .text {
+      padding: 136px 15% 40px 18%;
+      width: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 20%;
+      left: 50%;
+
+      @include breakpoint(desktop-s) {
+        padding: 100px 12% 40px 16%;
+      }
+
+      @include breakpoint(tablet-h) {
+        top: 10%;
+        padding-top: 80px;
+      }
+
+      @include breakpoint(tablet-v) {
+        top: 10%;
+        padding: 60px 8% 30px 14%;
+      }
+
+      @include breakpoint(menuswap) {
+        background: rgb(233,237,244);
+      	background: linear-gradient(to right, rgb(255,255,255) 50%,rgb(233,237,244) 50%);
+        position: static;
+        width: 100%;
+        padding: 40px 5% 80px;
+      }
+
+      @include breakpoint(phone-h) {
+        padding-bottom: 40px;
+      }
+    }
+
+    .vline {
+      @include breakpoint(menuswap) {
+        margin-top: -80px;
+      }
+    }
+  } // .s-one
+
+
+// S TWO ------- the beginning -----------------------
+  .s-two {
+    margin-top: 25px;
+
+    .heading {
+      margin-bottom: 80px;
+
+      @include breakpoint(phone-h) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .vid1 {
+      position: relative;
+      width: 54%;
+      overflow: visible;
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(phone-h) {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .hoverimage {
+        position: absolute;
+        top: 0;
+        left: 90%;
+        width: 60%;
+
+        img {
+          width: 100%;
+        }
+
+        @include breakpoint(tablet-h) {
+          left: 90%;
+        }
+
+        @include breakpoint(phone-h) {
+          width: 50%;
+          top: 50%;
+          left: 55%;
+        }
+      }
+
+      .caption {
+        padding: 10px 5% 0 30%;
+
+        @include breakpoint(phone-h) {
+          width: 60%;
+          padding-left: 10%;
+        }
+      }
+
+      .trigger {
+        top: 30%;
+        left: 30%;
+		@include breakpoint(phone-h) {
+ 	      top: 38%;
+		  left: 12%;
+	  	}
+		@include breakpoint(phone-h) {
+ 	      top: 32%;
+	  	}
+
+        a {
+          @include playbutt(16px);
+        }
+      }
+    }
+
+    .image {
+      float: right;
+      width: 41%;
+      margin: -120px 5% 0 0;
+
+      img {
+        width: 100%;
+      }
+
+      .hline {
+        margin-left: 10%;
+        width: 30%;
+      }
+
+      .title {
+        margin: 40px 0 0 11%;
+      }
+
+      @include breakpoint(phone-h) {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 40px;
+
+        .hline {
+          width: 40%;
+        }
+
+        .title {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .text {
+      color: $color__dark;
+      float: left;
+      margin: 40px 0;
+      padding-left: 7%;
+      width: 50%;
+
+      @include breakpoint(phone-h) {
+        width: 90%;
+        padding: 0;
+        margin: 20px 5% 0;
+      }
+    }
+    .vline {
+      @include breakpoint(phone-h) {
+        margin-top: 0;
+      }
+    }
+  }
+
+
+  // S THREE ------------------------------
+  .s-three {
+
+    .backdrop {
+      position: absolute;
+      top: -40px;
+      z-index: -1;
+      background: $color__base;
+      width: 100%;
+      height: 450px;
+
+      @include breakpoint(phone-h) {
+        height: 300px;
+        top: 0;
+      }
+    }
+
+    .heading {
+      margin: 20px 0 60px;
+      color: #fff;
+
+      @include breakpoint(phone-h) {
+        margin: 10px 0 20px;
+        padding-top: 40px;
+      }
+    }
+    .q-text {
+      float: left;
+      width: 50%;
+      padding-left: 9%;
+      margin-bottom: 40px;
+      color: #fff;
+      @include font-size(3.125);
+
+      @include breakpoint(tablet-h) {
+        @include font-size(3);
+      }
+
+      @include breakpoint(tablet-v) {
+        @include font-size(2.75);
+      }
+
+      @include breakpoint(phone-h) {
+        @include font-size(2);
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+
+    .q-image {
+      float: right;
+      width: 50%;
+      margin-top: 60px;
+
+      img {
+        width: 100%;
+      }
+
+      .hline {
+        margin-left: 10%;
+        width: 30%;
+      }
+
+      .title {
+        margin: 25px 0 0 11%;
+      }
+
+      @include breakpoint(phone-h) {
+        float:none;
+        width: 90%;
+        margin: 0 auto;
+
+        .hline {
+          margin-left: 10%;
+          width: 50%;
+        }
+      }
+    }
+
+    .vid1 {
+      position: relative;
+      clear: left;
+      display: inline-block;
+      width: 50%;
+      margin: 200px 0 0 0;
+
+      img {
+        width: 50%;
+        float: left;
+        margin-right: 25px;
+      }
+
+      .cap1 {
+        float: left;
+        width: 40%;
+        padding: 100px 15% 0 0;
+      }
+
+      @include breakpoint(tablet-h) {
+        margin-top: 150px;
+
+        .cap1 {
+          padding-top: 40px;
+        }
+      }
+
+      @include breakpoint(tablet-v) {
+        margin-top: 100px;
+        @include font-size(2.75);
+
+        .cap1 {
+          padding: 10px 5% 0 0;
+          width: 40%;
+        }
+      }
+
+      @include breakpoint(phone-h) {
+        width: 90%;
+        margin: 40px 5% 0;
+
+        .cap1 {
+          padding: 10px 0 0;
+        }
+      }
+      .trigger {
+        top: 30%;
+        left: 8%;
+      }
+
+      a {
+        @include playbutt(12px);
+      }
+    }
+
+    .vid2 {
+      position: relative;
+      float: right;
+      width: 50%;
+      margin: 0 5% 0 0;
+
+      img {
+        width: 50%;
+        float: right;
+        margin-right: 25px;
+      }
+
+      .cap2 {
+        clear: both;
+        float: right;
+        width: 40%;
+        padding: 8px 13% 0 0;
+
+        @include breakpoint(tablet-h) {
+          width: 50%;
+          padding-right: 5%;
+        }
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 100%;
+        margin: 0;
+
+        img {
+          width: 100%;
+          margin: 0;
+        }
+
+        .cap2 {
+          float: none;
+          width: 80%;
+          padding: 10px 5% 10px;
+        }
+      }
+
+      .trigger {
+        top: 40%;
+        right: 46%;
+		@include breakpoint(phone-h) {
+          top: 60%;
+		  right: 86%;
+        }
+		@include breakpoint(phone-v) {
+          top: 52%;
+        }
+      }
+
+      a {
+        @include playbutt(8px);
+      }
+    }
+
+    .text {
+      color: $color__dark;
+      margin: 130px 0 0 12%;
+      width: 30%;
+
+      @include breakpoint(tablet-h) {
+        width: 40%;
+        margin: 100px 0 0 5%;
+      }
+
+      @include breakpoint(phone-h) {
+        clear: both;
+        width: 90%;
+        margin: 6px 5%;
+      }
+    }
+
+    .vline {
+      margin-bottom: -25px;
+    }
+
+  } // .S Three
+
+
+
+  // S FOUR -------- founding bose -------------------
+  .s-four {
+    background: rgb(233,237,244);
+  	background: linear-gradient(to right, rgb(233,237,244) 50%,rgb(255,255,255) 50%);
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @include breakpoint(phone-h) {
+      padding-top: 40px;
+      padding-bottom: 0;
+      background: linear-gradient(to right, rgb(233,237,244) 100%,rgb(255,255,255) 100%);
+    }
+
+    .heading {
+      margin-bottom: 80px;
+
+      @include breakpoint(phone-h) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .vid1 {
+      position: relative;
+      width: 50%;
+      margin-left: 7%;
+
+      img {
+        width: 100%;
+      }
+
+      .cap1 {
+        margin: 10px 0 0 40px;
+        width: 70%;
+      }
+
+      .q-block {
+        width: 70%;
+        position: absolute;
+        top: 60%;
+        left: 110%;
+        line-height: 1.5;
+        color: $color__highlight;
+        @include font-size(1.5);
+      }
+
+      @include breakpoint(tablet-h) {
+        .q-block {
+		  left: 105%;
+		  top: 20%;
+          @include font-size(1.25);
+        }
+      }
+
+      @include breakpoint(menuswap) {
+        .q-block {
+          @include font-size(1.125);
+        }
+      }
+
+      @include breakpoint(phone-h) {
+        width: 100%;
+        margin: 0;
+
+        .q-block {
+          width: 100%;
+          padding: 0 5%;
+          position: static;
+          @include font-size(1.125);
+        }
+      }
+
+      .trigger {
+        top: 55%;
+        left: 10%;
+		@include breakpoint(phone-h) {
+ 	      top: 36%;
+	  	}
+		@include breakpoint(phone-v) {
+ 	      top: 30%;
+	  	}
+      }
+
+      a {
+        @include playbutt(10px);
+      }
+    }
+
+    .text {
+      color: $color__dark;
+      float: right;
+      margin: 100px 2% 0 0;
+      width: 55%;
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 90%;
+        margin: 40px 5%;
+      }
+    }
+
+    .img1 {
+      margin-top: 80px;
+      width: 40%;
+
+      img {
+        width: 100%;
+      }
+
+      .hline {
+        margin: 0 0 10px 50%;
+        width: 25%;
+      }
+
+      .title {
+        margin-left: 52%;
+      }
+
+      @include breakpoint(phone-h) {
+        margin-top: 20px;
+        width: 100%;
+
+        .hline {
+          width: 50%;
+          margin-left: 25%;
+        }
+
+        .title {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .vline {
+      @include breakpoint(phone-h) {
+        margin:0;
+        top: 20px;
+        left: 50%;
+      }
+    }
+
+  } // .S Four
+
+
+
+
+
+  // S FIVE -------- amar's vision ----------------------
+  .s-five {
+
+    margin-top: -80px;
+    @include breakpoint(phone-h) {
+      margin-top: 40px;
+
+      .borderbox-tl {
+        width: 10%;
+      }
+    }
+
+    .heading {
+      margin-bottom: 40px;
+      position: relative;
+
+      @include breakpoint(phone-h) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .img1 {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .q-block {
+      background-color: #fff;
+      font-family: $font__headers;
+      padding: 40px 60px 10px;
+      width: 40%;
+      position: absolute;
+      z-index: 2;
+      top: -300px;
+      left: 10%;
+      @include font-size(1.5);
+
+      @include breakpoint(desktop-s) {
+        width: 45%;
+        left: 5%;
+        top: -200px;
+        @include font-size(1.25);
+      }
+
+      @include breakpoint(tablet-h) {
+        @include font-size(1.125);
+      }
+
+      @include breakpoint(menuswap) {
+        padding: 40px 40px 0;
+        @include font-size(1);
+      }
+
+      @include breakpoint(phone-h) {
+        position: relative;
+        width: 80%;
+        padding: 25px 30px 0;
+        top: -25px;
+        left: 10%;
+      }
+    }
+
+    .title {
+      clear: both;
+      float: right;
+      width: 30%;
+      margin-right: 10%;
+
+      .hline {
+        width: 50%;
+        position: relative;
+        top: -50px;
+      }
+
+      @include breakpoint(menuswap) {
+        width: 40%;
+        margin-right: 5%;
+        .hline {
+          top: -25px;
+        }
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+
+        .hline {
+          top: 0;
+          left: 25%;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .image {
+      float: left;
+      width: 40%;
+      margin: -80px 0 0 7%;
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(desktop-s) {
+        margin-top: -40px;
+      }
+
+      @include breakpoint(tablet-h) {
+        margin-top: 0;
+      }
+
+      @include breakpoint(tablet-l) {
+        margin-top: 50px;
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 93%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .text {
+      color: $color__dark;
+      float: right;
+      margin: 60px 15% 0 0;
+      width: 30%;
+
+      @include breakpoint(tablet-h) {
+        width: 35%;
+        margin-right: 10%;
+      }
+
+      @include breakpoint(tablet-v) {
+        width: 40%;
+        margin-right: 5%;
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        margin: 40px 5% 0;
+        width: 90%;
+      }
+    }
+  } // .S Five
+
+
+
+  // S SIX -------- the legacy ----------------------
+  .s-six {
+
+    .heading {
+      margin-top: 20px;
+      margin-bottom: 60px;
+
+      @include breakpoint(phone-h) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .vid1 {
+      margin-left: 5%;
+      position: relative;
+      width: 52%;
+
+      img {
+        width: 100%;
+      }
+
+      .cap {
+        position: absolute;
+        top: 80px;
+        right: -55%;
+        width: 50%;
+      }
+
+      @include breakpoint(tablet-l) {
+        .cap {
+          top: 30px;
+        }
+      }
+
+      @include breakpoint(menuswap) {
+        .cap {
+          top: 15px;
+          right: -75%;
+          width: 70%;
+        }
+      }
+
+      @include breakpoint(phone-h) {
+        margin: 0;
+        width: 100%;
+
+        .cap {
+          position: static;
+          margin: 10px 0 0 10%;
+        }
+      }
+
+      .trigger {
+        top: 40%;
+        left: 12%;
+      }
+
+      a {
+        @include playbutt(12px);
+      }
+    }
+
+    .q-block {
+      width: 40%;
+      float: left;
+      line-height: 1.5;
+      margin: 7%;
+      color: $color__highlight;
+      font-family: $font__headers;
+      @include font-size(1.5);
+
+      span {
+        @include font-size(1);
+
+        span {
+          font-family: $formular-mi;
+        }
+      }
+
+      @include breakpoint(menuswap) {
+        @include font-size(1.25);
+      }
+
+      @include breakpoint(phone-h) {
+        width: 90%;
+        float: none;
+        margin: 0 5%;
+      }
+    }
+
+    .image {
+      float: right;
+      width: 43%;
+      margin-top: -100px;
+
+      img {
+        width: 100%;
+      }
+
+      .hline {
+        width: 25%;
+        margin-left: 5%;
+      }
+
+      .title {
+        margin-left: 6%;
+        margin-top: 25px;
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+
+        .hline {
+          width: 40%;
+          margin-left: 10%;
+        }
+
+        .title {
+          margin-left: 11%;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .vid2 {
+      clear: both;
+      display: inline-block;
+      float: left;
+      position: relative;
+      width: 40%;
+
+      img {
+        width: 100%;
+      }
+
+      .cap {
+        width: 50%;
+        margin-top:10px;
+        margin-left:20%;
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 100%;
+
+        .cap {
+          width: 80%;
+          margin-top:10px;
+          margin-left:10%;
+        }
+      }
+
+      .trigger {
+        top: 30%;
+        left: 10%;
+      }
+	  @include breakpoint(phone-h) {
+		  .trigger {
+	        top: 40%;
+	      }
+	  }
+
+	  a {
+        @include playbutt(12px);
+      }
+    }
+
+    .text {
+      color: $color__dark;
+      float: right;
+      margin: 100px 12% 0 0;
+      width: 40%;
+
+      @include breakpoint(desktop-s) {
+        margin-right: 5%;
+      }
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 90%;
+        margin: 20px 5% 0;
+      }
+    }
+
+    .image2 {
+      clear: both;
+      float: right;
+      margin: 0 5% 0 0;
+
+      @include breakpoint(phone-h) {
+        float: none;
+        width: 90%;
+        margin: 40px 5% 0;
+      }
+    }
+
+    .vline {
+      clear: both;
+      margin-bottom: -25px;
+    }
+
+  } // .S Six
+
+
+  /*.mobile-section-head {
+    display: none;
+    clear: both;
+    position: relative;
+    margin: 35px 0 25px;
+    border-bottom: 1px solid $color__base;
+    .icon {
+      position: absolute;
+      cursor: pointer;
+      color: $color__highlight;
+      right: 16px;
+      top: 0;
+
+      &:hover {
+        color: $color__bosepurp;
+      }
+    }
+    .m {
+      position: relative;
+      text-align: center;
+      .heading {
+        @include font-size(1.063);
+      }
+      .title {
+        @include font-size(1.375);
+      }
+    }
+    .l {
+      display: none;
+      position: relative;
+      text-align: left;
+      padding-left: 5%;
+    }
+    .vline {
+      height: 25px;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+    }
+  }
+
+  @include breakpoint (phone-h) {
+    .entry-content .section:not(.s-one) {
+      display:none;
+    }
+    .mobile-section-head {
+      display:block;
+	}
+  }*/
+
+} // .file

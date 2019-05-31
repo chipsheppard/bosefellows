@@ -1,0 +1,91 @@
+.search {
+	background: linear-gradient(to right, rgb(233,237,244) 50%,rgb(255,255,255) 50%);
+
+	.nub {
+	  width: 50%;
+		top: 385px;
+
+		@include breakpoint(phone-h) {
+			top: 259px;
+		}
+	}
+
+	.borderbox-tl {
+		position: absolute;
+		z-index: 1;
+		top: 410px;
+		right: 0;
+		width: 50%;
+
+		@include breakpoint(phone-h) {
+			top: 284px;
+		}
+	}
+
+	.entry-content {
+  	padding: 0 0 100px 0;
+  	position: relative;
+
+  	@include breakpoint(menuswap) {
+  		padding: 0 0 40px;
+  	}
+  }
+
+	.page-title {
+		margin-left: 50%;
+	}
+
+  .results-brief {
+    font-family: $font__headers;
+    padding: 128px 0 0 15%;
+    @include font-size(1.625);
+
+    span {
+      font-family: $font__main;
+    }
+  }
+
+  .borderbox-tl {
+    float: right;
+    width: 50%;
+  }
+
+  article {
+
+    margin: 60px;
+
+    &.type-page:before,
+    &.type-post:before,
+    &.type-project:before {
+      display: block;
+      color: $color__highlight;
+      font-family: $font__headers;
+    }
+
+    &.type-page:before {
+      content: "PAGE";
+    }
+
+    &.type-post:before {
+      content: "POST";
+    }
+
+    &.type-project:before {
+      content: "PROJECT";
+    }
+
+    .entry-title {
+      border-bottom: 2px solid $color__highlight;
+      a {
+        color: $color__base;
+        &:hover {
+          color: $color__highlight;
+        }
+      }
+    }
+
+    .entry-summary {
+  		margin: 1em 0 .5em;
+  	}
+  }
+}

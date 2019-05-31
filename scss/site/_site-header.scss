@@ -1,0 +1,141 @@
+/*
+
+THE SITE HEADER
+--------------------------------- */
+.site-header {
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.inner-wrap {
+	  padding: 0 52px;
+		@include breakpoint(desktop-s) {
+	    padding: 0 100px;
+	  }
+
+		@include breakpoint(tablet-l) {
+			padding: 0 20px;
+		}
+
+		@include breakpoint(menuswap) {
+	    padding: 0 40px;
+	  }
+
+	  @include breakpoint(phone-h) {
+	    padding: 0 16px;
+	  }
+	}
+}
+
+.header-left {
+	float: left;
+}
+
+.header-right {
+	float: right;
+	padding-right: 50px;
+	position: relative;
+}
+
+.site-branding {
+	position: absolute;
+	left: 50%;
+	margin-left: -123px;
+	margin-top: 12px;
+}
+
+.site-title {
+	a {
+		overflow: hidden;
+		@include font-size(.125);
+
+		&:before {
+			background-repeat: no-repeat;
+			background-size: 100%;
+			content:'';
+			display: inline-block;
+			height: 58px; /* 116 */
+			line-height: 1;
+			overflow: hidden;
+			vertical-align: top;
+			width: 71px; /* 142 */
+		}
+
+		.text {
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 17px; /* 34 */
+			margin: 18px 0 0 18px;
+		  width: 186px; /* 372 */
+		}
+
+		span {
+			display: inline-block;
+			text-indent: -100%;
+			width: 1px;
+			overflow: hidden;
+		}
+	}
+}
+
+.site-description {
+	display: none;
+}
+
+
+@include breakpoint(menuswap) {
+	.site-branding {
+		position: relative;
+		margin: 0 auto;
+		left: 0;
+		width: 280px;
+	}
+
+	.site-title {
+		padding-top: 12px;
+	}
+
+	.header-right {
+		display: none;
+		border-bottom: 5px solid $color__highlight;
+		background-color: #fff;
+		float:none;
+		padding: 1em 0 .5em 2.125em;
+		position: absolute;
+		right: 0;
+		top: 110px;
+		width: 100%;
+		z-index: 99;
+	}
+
+	.pre-anim .header-right {
+		top: 74px;
+	}
+}
+
+@include breakpoint(phone-v) {
+	.header-right {
+		top: 84px;
+		padding-left: 1.125em;
+	}
+
+	.site-branding {
+		width: 205px;
+	}
+
+	.site-title a {
+		.text {
+			height: 12px;
+			margin: 12px 0 0 12px;
+			width: 127px;
+		}
+
+		&:before {
+			height: 35px; /* 102 - 116(58) */
+			width: 43px; /* 80 - 142(71) */
+		}
+	}
+}

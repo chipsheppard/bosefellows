@@ -1,0 +1,167 @@
+
+.leftcol-insert {  // single project (star)
+  position: relative;
+  left: -70%;
+  width: 42%;
+  height: 0;
+  overflow: visible;
+  @include font-size(.75);
+
+  @include breakpoint(menuswap) {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    margin-bottom: .25em;
+  }
+}
+
+
+
+
+.footnote-wrap {
+  position: relative;
+
+  .marker {
+    position: relative;
+    top: -4px;
+    color: $color__highlight;
+    border: 1px solid $color__highlight;
+    border-radius: 50%;
+    padding: 3px 5px;
+    @include font-size(.25);
+  }
+
+  .note {
+    position: absolute;
+    display: inline-block;
+    right: 120%;
+    background-color: #fff;
+    width: 220px;
+    padding: 20px 40px 20px 24px;
+    @include font-size(.75);
+
+    &:before {
+      position: absolute;
+      top: 18px;
+      right:24px;
+      color: $color__highlight;
+      content: '\2022';
+      @include font-size(1);
+    }
+
+    @include breakpoint(desktop-xl){
+      right: 110%;
+    }
+
+    @include breakpoint(desktop-s){
+      right: 113%;
+    }
+
+    @include breakpoint(tablet-h){
+      right: 115%;
+    }
+
+    @include breakpoint(tablet-l){
+      right: 111%;
+    }
+  }
+
+
+  @include breakpoint(menuswap){
+    .note {
+      display: none;
+      right: calc(50% - 110px);
+      top: 0;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+    }
+
+    .footnote:hover {
+      .note {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+.insert-wrap {
+  left:50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100vw;
+  
+  @include breakpoint(menuswap) {
+    position: static;
+    left: 0;
+    transform: none;
+    width: auto;
+  }
+}
+
+.project-insert {
+  position: absolute;
+  right: 66%;
+  top: 200px;
+  height: 0;
+  overflow: visible;
+  text-align: right;
+
+  @include breakpoint(tablet-h) {
+    right: 65%;
+  }
+
+  @include breakpoint(menuswap) {
+    position: static;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 16px 0 32px;
+  }
+
+  .project-insert-text {
+    overflow: hidden;
+  }
+
+  .project-title {
+    display: block;
+    letter-spacing: normal;
+    padding-right: 0;
+    text-transform: none;
+    font-family: $formular-b;
+    margin-bottom: 5px;
+    @include font-size(1.063);
+
+    @include breakpoint(menuswap) {
+      margin-bottom: 0;
+    }
+  }
+
+  .researcher-name {
+    color: $color__highlight;
+    @include font-size(.875);
+  }
+
+  .researcher-photo { // see projects.scss
+    float: right;
+    margin: 20px 0 0 15px;
+    height: 60px;
+    width: 60px;
+
+    @include breakpoint(menuswap) {
+      float: left;
+      margin: 0 15px 0 0;
+    }
+
+    img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .researcher-title {
+    @include font-size(.75);
+  }
+}

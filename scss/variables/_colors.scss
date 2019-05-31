@@ -1,0 +1,30 @@
+
+$color__base: #2b2c75;
+$color__navy: #2b2c75;
+$color__dark: #000;
+$color__highlight: #1439ff;
+
+$color__bosegray: #e9edf4;
+$color__bosegray-drk: #d7e0f0;
+$color__bosepurp: #818ac1;
+$color__med: #a1a1a1;
+$color__light: #c1c1c1;
+$color__xlight: #d1d1d1;
+$color__xxlight: #e1e1e1;
+$color__xxxlight: #f1f1f1;
+
+$color__highlight-light: lighten( $color__highlight, 22% );
+$color__highlight-desat: desaturate( $color__highlight, 50% );
+$color__highlight-dark: darken( $color__highlight-desat, 22% );
+
+// Body ------------------------
+$color__body-bg: #ffffff;
+
+// HR ----------------------------------------
+$color__hr: rgba(0,0,0,0.1);
+$color__hr-lt: rgba(255,255,255,0.5);
+
+// links ------------------------------------
+$color__link: $color__navy;
+$color__link-visited: $color__navy;
+$color__link-hover: $color__highlight;

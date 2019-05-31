@@ -1,0 +1,439 @@
+/* Projects
+--------------------------------------------- */
+.page-template-projects {
+
+	.borderbox-tr {
+		position: absolute;
+		z-index: 1;
+		top: 720px;
+		left: 0;
+		width: 50%;
+
+		@include breakpoint(phone-h) {
+			top: 429px;
+		}
+	}
+
+	.page-header {
+		padding-left: 62px;
+		padding-top: 300px;
+
+		@include breakpoint(menuswap) {
+			padding-left: 5%;
+		}
+
+		@include breakpoint(phone-h) {
+			padding-top: 200px;
+		}
+	}
+
+	.page-title {
+		color: #fff;
+		margin-bottom: 40px;
+		@include font-size(4.313);
+
+		@include breakpoint(tablet-h) {
+			@include font-size(3);
+		}
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.563);
+		}
+	}
+
+	.borderbox-tr {
+		width: 50%;
+	}
+
+	.project-intro-block {
+		background: #fff;
+		left: 50%;
+		line-height: 2;
+		padding: 90px 5% 40px;
+		position: absolute;
+		top: -40px;
+		width: 40%;
+		@include font-size(1.125);
+
+		@include breakpoint(tablet-l) {
+			padding-top: 50px;
+			width: 45%;
+		}
+
+		@include breakpoint(menuswap) {
+			left: auto;
+			padding: 25px 5% 0;
+			position: relative;
+			top: auto;
+			width: 100%;
+		}
+	}
+
+	.project-filter {
+		display: inline-block;
+		padding: 10px;
+		margin: 50px 0 0 50px;
+
+		@include breakpoint(tablet-l) {
+			padding-left: 5%;
+		}
+
+		@include breakpoint(menuswap) {
+			margin: 20px 0 40px 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	// the dropdown with tags
+	.post_tags ul {
+		background: #fff;
+	}
+
+	.cards-wrap {
+		margin-top: 260px;
+
+		@include breakpoint(menuswap) {
+			margin-top: 0;
+		}
+
+		@include breakpoint(phone-h) {
+			.inner-wrap {
+				padding: 0;
+			}
+		}
+	}
+
+	.left-col {
+		float: left;
+		width:31.623931623931625%;
+		padding: 0 0 0 9%;
+
+		@include breakpoint(menuswap) {
+			padding: 0 5%;
+		}
+	}
+
+	.cards {
+		float: left;
+		width:65.81196581196582%;
+		padding-top: 50px;
+		padding-left: 0;
+	}
+
+	@include breakpoint(tablet-h) {
+		.left-col,
+		.cards {
+			float:none;
+			display:block;
+			margin:0;
+			width:100%;
+		}
+	}
+
+
+	article.card {
+		width: 47%;
+		margin-top: 50px;
+		margin-bottom: 60px;
+
+		@include breakpoint(menuswap) {
+			width: 100%;
+			display: inline-block;
+			margin-top: 0;
+			margin-bottom: 80px;
+		}
+
+		&:nth-of-type(odd) {
+			clear: both;
+		}
+
+		&.q3:nth-of-type(odd), // added in place of below commented out css.
+		&.q2:nth-of-type(odd),
+		&.q1:nth-of-type(odd) {
+			margin-top: -20px;
+
+			@include breakpoint(menuswap) {
+				margin-top: 0;
+			}
+		}
+/*
+		&.q3:nth-of-type(even) {
+			margin-top: -20px;
+
+			@include breakpoint(menuswap) {
+				margin-top: 0;
+			}
+		}
+*/
+
+		.feat-image {
+			margin-bottom: 0;
+		}
+
+		.awarded {
+			position: absolute;
+			top: 16px;
+			right: 30px;
+			color: $color__bosepurp;
+			@include font-size(.875);
+
+			@include breakpoint(tablet-h) {
+				right: 5px;
+			}
+
+			@include breakpoint(tablet-v) {
+				right: 30px;
+			}
+		}
+
+		.entry-content {
+			min-height: 210px;
+			padding: 10px 40px 0;
+		}
+
+		.project-title {
+			color: $color__highlight;
+			letter-spacing: 2px;
+			margin: 12px 0;
+			text-transform: uppercase;
+			@include font-size(1);
+
+			span {
+				border-bottom: 2px solid $color__base;
+			}
+		}
+
+		.project-description {
+			@include font-size(.938);
+			margin-bottom: 25px;
+		}
+
+		.researcher-name {
+			font-family: $font__headers;
+			@include font-size(1);
+
+			span {
+				display: none;
+			}
+		}
+
+		.researcher-title {
+			@include font-size(.75);
+		}
+	} // article.card
+
+
+	// JUMP TARGET ANCHOR
+	.aname {
+		float: left;
+		color: $color__bosegray;
+	}
+
+	.bosequote-insert {
+		margin-bottom: 220px;
+
+		@include breakpoint(menuswap) {
+			margin-bottom: 40px;
+		}
+
+		.borderbox-tl {
+			float: right;
+		}
+
+		.more {
+			position: absolute;
+			bottom: 80px;
+			right: 35%;
+
+			@include breakpoint(tablet-h) {
+				right: 10%;
+			}
+
+			@include breakpoint(tablet-l) {
+				bottom: auto;
+				right: auto;
+				left: 10%;
+				padding-left: 24px;
+				top: 20px;
+			}
+
+			a {
+				@include font-size(1);
+			}
+		}
+	} // .bosequote-insert
+
+
+	// searchandfilter Form
+	.searchandfilter {
+		display: inline-block;
+		padding: 15px;
+	}
+} // .page-template-projects
+
+
+
+.researcher-photo {
+	float: left;
+	margin-right: 32px;
+	height: 94px;
+	width: 94px;
+	border-radius: 50%;
+	border: 3px solid #ffffff;
+	max-width: 100%;
+	overflow: hidden;
+
+	@include breakpoint (phone-h) {
+		margin-right: 16px;
+		height: 75px;
+		width: 75px;
+
+		img {
+			height: 75px;
+			width: 75px;
+		}
+	}
+}
+
+.researcher-name {
+	font-family: $formular-b;
+	@include font-size(1.688);
+}
+
+.project-title {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	@include font-size(1.125);
+
+	a {
+		border-bottom: 2px solid $color__base;
+
+		&:hover {
+			border-bottom: 2px solid $color__highlight;
+		}
+	}
+}
+
+.project-description {
+	@include font-size(1.563);
+}
+
+
+
+/* Single Project Pages
+--------------------------------------------- */
+
+.single-project {
+
+	.entry-header .entry-title {
+		width: 100%;
+
+		@include breakpoint(menuswap) {
+			clear: both;
+			padding-top: .5em;
+		}
+
+		.others {
+			overflow: hidden;
+
+			//@include breakpoint(menuswap) {
+			//	display: block;
+			//}
+		}
+	}
+
+	.project-description,
+	.project-title {
+		display: inline;
+	}
+
+	.project-description {
+		font-family: $formular-m;
+	}
+
+	.more {
+		margin-bottom: 16px;
+
+		a {
+			display: inline-block;
+			margin-right: 40px;
+			@include font-size(.8125);
+		}
+
+		.rname,
+		.orname {
+			margin-bottom: 5px;
+			text-transform: none;
+			padding-left: 4px;
+			@include font-size(.688);
+		}
+
+		.orname {
+			margin-top: 10px ;
+		}
+	}
+
+	.jump-menu {
+		position: absolute;
+		left: 10%;
+		margin-top: 30px;
+		padding: 0 15px 5px 15px;
+		top: 0;
+		width: 150px;
+		background: $color__bosegray;
+		z-index: 2;
+
+		@include breakpoint(tablet-h) {
+			left: 8%;
+		}
+
+		@include breakpoint(menuswap) {
+			background: #fff;
+			position: relative;
+			width: 100%;
+			left: 0;
+			padding: 0;
+		}
+
+		@include breakpoint(phone-h) {
+			display: none;
+		}
+
+		a {
+			border-bottom: 2px solid transparent;
+			display: inline-block;
+			padding: 12px 10px 3px 0;
+
+			&:hover {
+				border-color: $color__base;
+			}
+		}
+	}
+
+	.section {
+		color: $color__dark;
+		padding-top: 80px;
+		@include font-size(.983);
+
+		.heading {
+			color: $color__base;
+			font-family: $font__headers;
+			margin-bottom: 16px;
+			@include font-size(1.063);
+		}
+
+		h2 {
+			@include font-size(1.563);
+			margin-bottom: 40px;
+		}
+	}
+
+	.publications {
+		margin-right: -18%;
+
+		@include breakpoint(menuswap) {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,114 @@
+/*
+
+## Taxonomy Menus
+-------------------------------------------- */
+.status_tags {
+	font-family: $formular-b;
+	margin-top: 15px;
+	padding: 10px;
+	position: relative;
+	width: 130px;
+	z-index: 2;
+	@include font-size(.875);
+
+	a {
+		color: $color__highlight;
+		display: inline-block;
+		line-height: 1.5;
+		padding-bottom: 1em;
+		width: 100%;
+
+		&:hover {
+			color: $color__base;
+		}
+	}
+
+	li {
+		padding: 5px 0 0;
+	}
+}
+
+.post_tags {
+	background: url(images/down-arrow.png) no-repeat 96% 8px;
+	font-family: $formular-b;
+	width: 250px;
+	@include font-size(.875);
+
+	ul {
+		display: none;
+		left: -10px;
+		padding: 0 10px;
+		position: absolute;
+		top: 36px;
+		width: 100%;
+		z-index: 3;
+	}
+
+	li {
+		padding: 5px 0 0;
+		position: relative;
+		color: $color__bosepurp;
+	}
+
+	li li {
+		padding: 0;
+		line-height: 3;
+	}
+
+	.fb {
+		border-bottom: 2px solid $color__highlight;
+		cursor: pointer;
+		padding-bottom: 5px;
+	}
+
+	.va {
+		background: url(images/up-arrow.png) no-repeat 96% 5px;
+		border-bottom: 3px solid $color__highlight;
+		line-height: 1.25;
+		padding-left: 3px;
+		padding-top: 10px;
+	}
+
+	a {
+		display: inline-block;
+		width: 100%;
+
+		span {
+			border-bottom: 3px solid $color__highlight-desat;
+			padding: 2px;
+		}
+
+		&:hover span {
+			border-color: $color__highlight;
+		}
+
+		&.advanced-materials {
+			span {border-bottom-color: #CEAD25;}
+			&:hover span {border-bottom-color: #FFD527;}
+		}
+		&.environmental-sustainability {
+			span {border-bottom-color: #3349C3;}
+			&:hover span {border-bottom-color: #627AFF;}
+		}
+		&.evolving-energy {
+			span {border-bottom-color: #07AAAA;}
+			&:hover span {border-bottom-color: #1FDADA;}
+		}
+		&.existential-questions {
+			span {border-bottom-color: #D96E44;}
+			&:hover span {border-bottom-color: #FF7B47;}
+		}
+		&.human-health {
+			span {border-bottom-color: #9C07AA;}
+			&:hover span {border-bottom-color: #CE12E0;}
+		}
+		&.information-systems {
+			span {border-bottom-color: #2588CE;}
+			&:hover span {border-bottom-color: #0095FF;}
+		}
+		&.tomorrows-tech {
+			span {border-bottom-color: #07AA47;}
+			&:hover span {border-bottom-color: #0AD359;}
+		}
+	}
+}

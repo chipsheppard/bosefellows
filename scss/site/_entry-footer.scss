@@ -1,0 +1,115 @@
+/*
+
+## ENTRY FOOTER
+-------------------- */
+.entry-footer {
+	line-height: 1.25;
+	padding: .5em 0;
+	@include font-size(.75);
+
+	@include breakpoint(phone-v) {
+		clear: both;
+	}
+}
+
+.cat-links,
+.tag-links {
+	padding:5px 10px 5px 0;
+}
+
+.edit-link {
+	float: right;
+  a {
+    display: inline-block;
+  }
+}
+
+.t-link {
+	display: inline;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: $color__highlight;
+
+	a {
+		color: $color__base;
+	}
+
+	&:hover {
+		border-bottom-color: $color__highlight-light;
+	}
+
+	&.advanced-materials {
+		border-bottom-color: #CEAD25;
+		&:hover {
+			border-bottom-color: #FFD527;
+		}
+	}
+
+	&.environmental-sustainability {
+		border-bottom-color: #3349C3;
+		&:hover {
+			border-bottom-color: #627AFF;
+		}
+	}
+
+	&.evolving-energy {
+		border-bottom-color: #07AAAA;
+		&:hover {
+			border-bottom-color: #1FDADA;
+		}
+	}
+	&.existential-questions {
+		border-bottom-color: #D96E44;
+		&:hover {
+			border-bottom-color: #FF7B47;
+		}
+	}
+	&.human-health {
+		border-bottom-color: #9C07AA;
+		&:hover {
+			border-bottom-color: #CE12E0;
+		}
+	}
+	&.information-systems {
+		border-bottom-color: #2588CE;
+		&:hover {
+			border-bottom-color: #0095FF;
+		}
+	}
+	&.tomorrows-tech {
+		border-bottom-color: #07AA47;
+		&:hover {
+			border-bottom-color: #0AD359;
+		}
+	}
+
+	.abbr {
+		display: inline-block;
+		text-align: center;
+		padding: 0 .25em;
+	}
+
+	.name {
+		display: none;
+		overflow: hidden;
+		padding: 0 .25em;
+	}
+
+	&:hover {
+		.abbr {
+			display: none;
+		}
+
+		.name {
+			display: inline;
+		}
+	}
+}
+
+.single .entry-header .t-link a {
+	color: #fff;
+
+	&:hover {
+		color: $color__xxlight;
+	}
+}

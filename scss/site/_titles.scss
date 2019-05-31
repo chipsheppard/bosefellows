@@ -1,0 +1,166 @@
+/* Titles
+--------------------------------------------- */
+
+.entry-title {
+	margin: 0;
+	font-family: $font__headers;
+	color: #fff;
+}
+
+.page-title {
+	margin: 0;
+	font-family: $font__headers;
+	color: #fff;
+
+	div {  /*  for archive title wrap function  */
+		display: inline-block;
+		text-transform: uppercase;
+		@include font-size(1);
+	}
+}
+
+.page:not(.page-template-news):not(.hentry) .entry-header {
+
+	.entry-title {
+		padding-top: 220px;
+		width: 60%;
+		line-height: 1;
+		@include font-size(4.313);
+
+		@include breakpoint(menuswap) {
+			width: 100%;
+			@include font-size(2.938);
+		}
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.563);
+		}
+	}
+}
+
+.blog .entry-header,
+.archive .entry-header {
+
+	.entry-title {
+		margin: .5em 0;
+		@include font-size(1.563);
+	}
+}
+
+.blog article:first-of-type .entry-header,
+.archive article:first-of-type .entry-header {
+	padding-top: 480px;
+
+	@include breakpoint(phone-h) {
+		padding-top: 200px;
+		padding-left: 0;
+	}
+
+	.entry-title {
+		width: 60%;
+		@include font-size(2);
+
+		@include breakpoint(menuswap) {
+			width: 100%;
+		}
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.5);
+		}
+
+		a {
+			color: #fff;
+			&:hover {
+				color: $color__xlight;
+			}
+		}
+	}
+}
+
+.archive {
+	article:first-of-type .entry-header {
+		padding-top: 200px;
+		margin: 0;
+
+		@include breakpoint(phone-h) {
+			padding-top: 20px;
+			padding-left: 0;
+		}
+	}
+	.page-header {
+		color: #fff;
+		padding-top: 200px;
+		padding-left: 60px;
+
+		@include breakpoint(tablet-l) {
+			padding-left: 16px;
+		}
+
+		@include breakpoint(menuswap) {
+			padding-left: 10px;
+		}
+
+		@include breakpoint(phone-h) {
+			padding-top: 120px;
+		}
+	}
+}
+
+.single .entry-header {
+	padding-top: 300px;
+	padding-left: 62px;
+
+	@include breakpoint(menuswap) {
+		padding-left: 0;
+	}
+
+	@include breakpoint(phone-h) {
+		padding-top: 260px;
+	}
+
+	@include breakpoint(phone-v) {
+		padding-top: 100px;
+	}
+
+	.entry-title {
+		width: 60%;
+		@include font-size(2.5);
+
+		@include breakpoint(tablet-l) {
+			width: 100%;
+		}
+
+		@include breakpoint(menuswap) {
+			@include font-size(1.563);
+		}
+	}
+
+	a {
+		color: #fff;
+
+		&:hover {
+			color: $color__base;
+		}
+	}
+
+	.researcher-title {
+		@include font-size(1.625);
+		color: #fff;
+		overflow: hidden;
+
+		@include breakpoint(menuswap) {
+			@include font-size(1.125);
+		}
+	}
+}
+
+.search .page-header,
+.error404 .page-header {
+	padding-top: 200px;
+	color: #fff;
+	padding-left: 62px;
+
+	@include breakpoint(menuswap) {
+		padding-left: 10px;
+	}
+}

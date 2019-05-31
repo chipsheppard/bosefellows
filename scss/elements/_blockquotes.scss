@@ -1,0 +1,99 @@
+/*
+
+## Blockquotes
+--------------------------------------------- */
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+blockquote {
+	position: relative;
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+blockquote {
+	background: #f3f3f3;
+	color: #111;
+	border-left: 4px solid #e1e1e1;
+	font-family: $font__headers;
+	margin: 0 1.5em 1.5em 0;
+	padding: 1.5em 1.875em .25em 3.5em;
+	quotes: "\201C""\201D""\201C""\201D";
+}
+
+blockquote p {
+	position:relative;
+	z-index: 2;
+}
+
+blockquote p:last-of-type {
+	margin-bottom: 1em;
+}
+
+blockquote::before {
+	display: block;
+	content: "\201C";
+	font-family: Georgia, serif;
+	color: #e1e1e1;
+	height: 0;
+	position: relative;
+	top: -.5em;
+	left: -.5em;
+	@include font-size(6);
+}
+
+blockquote span {
+	display: block;
+	color: #111;
+	line-height:1.25;
+	@include font-size(.825);
+}
+
+blockquote.pullright {
+	float: right;
+	width: 32%;
+  padding: 1em 1.5em .25em;
+	margin: 0 0 1.5em 1.5em;
+  border-left: 4px solid #e1e1e1;
+
+	&::before {
+		display: none;
+		content: "";
+	}
+}
+
+blockquote.pullleft {
+	float:left;
+	width: 32%;
+  padding: 1em 1.5em .25em;
+  border-left: 0;
+  border-right: 4px solid $color__xxlight;
+  
+	&::before {
+    display: none;
+    content: "";
+	}
+}
+
+@include breakpoint(tablet-v) {
+	blockquote.pullright,
+	blockquote.pullleft {
+    float: none;
+    width: 100%;
+    padding: 1em 1.5em .25em;
+    margin-left: 0;
+	}
+}

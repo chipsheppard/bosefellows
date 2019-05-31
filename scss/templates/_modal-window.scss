@@ -1,0 +1,66 @@
+#bosemodal {
+	display: none;
+	z-index: 99;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(43, 44, 117, 0.5);
+	text-align:center;
+}
+
+.bosemodal-wrap {
+	margin:150px auto 0;
+	background:transparent;
+
+	@include breakpoint(menuswap) {
+		margin-top: 20px;
+	}
+}
+
+.bosemodal-close {
+	position: absolute;
+	top: 100px;
+	right: 20%;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	@include breakpoint(menuswap) {
+		top: 20px;
+		right: 20px;
+	}
+}
+
+.bosemodal-close:hover {
+	color: #ddd;
+}
+
+.bosemodal-content {
+	padding:40px 0 0;
+}
+.bosemodal-info {
+	background-color: #fff;
+  	padding: 120px 40px 80px;
+	width: 80%;
+	margin: -80px auto 0;
+	text-align: left;
+
+	@include breakpoint(menuswap) {
+		width: 100%;
+	}
+
+	.vid-date {
+		@include font-size(.75);
+	}
+	.vid-title {
+		font-family: $formular-b;
+		@include font-size(1.25);
+	}
+	.more {
+		float: right;
+		padding-top:8px;
+	}
+}
