@@ -161,10 +161,6 @@ Program
 		//background: none;
 		text-align: center;
 
-		&.co1 {
-			margin-top: 150px;
-		}
-
 		&.co2 {
 			margin-top: 50px;
 			position: relative;
@@ -205,7 +201,6 @@ Program
 		}
 
 		@include breakpoint(menuswap) {
-			&.co1,
 			&.co2,
 			&.co4 {
 				padding-top: 0;
@@ -220,6 +215,7 @@ Program
 		@include breakpoint(menuswap) {
 			margin-bottom: 40px;
 		}
+
 		.vid-citation {
 			margin-top: 1em;
 			@include font-size(1.25);
@@ -257,6 +253,7 @@ Program
 				opacity: .9;
 			}
 		}
+
 		.trigger-text {
 			font-weight: $font__weight-bold;
 			color: #ffffff;

@@ -57,12 +57,6 @@ get_header(); ?>
 									<li><a href="#pm6"><?php the_field( 's6_menu' ); ?></a></li>
 								<?php endif; ?>
 							</ul>
-
-							<?php if ( get_field( 'first_callout' ) ) : ?>
-								<div class="callout co1">
-									<?php the_field( 'first_callout' ); ?>
-								</div>
-							<?php endif; ?>&nbsp;
 						</div>
 
 <a name="pm1"></a>

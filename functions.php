@@ -165,7 +165,7 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
  * Enqueue scripts and styles.
  */
 function bosefellows_scripts() {
-	wp_enqueue_style( 'bosefellows-style', get_stylesheet_uri(), array(), '1.0.1' );
+	wp_enqueue_style( 'bosefellows-style', get_stylesheet_uri(), array(), '1.2.0' );
 
 	wp_enqueue_script( 'bosefellows-headroom', get_template_directory_uri() . '/js/headroom-min.js', array(), '20170612', true );
 	wp_enqueue_script( 'bosefellows-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170605', true );

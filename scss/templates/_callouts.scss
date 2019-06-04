@@ -1,87 +1,87 @@
 // Left Column CallOuts
 .callout {
-  background-color: $color__bosegray;
-  padding: 10px;
-  position: relative;
-  z-index: 2;
-  @include font-size(.688);
+	background-color: $color__bosegray;
+	padding: 10px;
+	position: relative;
+	z-index: 2;
+	@include font-size(.688);
 
-  @include breakpoint(tablet-h) {
-    background: none;
-  }
+	@include breakpoint(tablet-h) {
+		background: none;
+	}
 
-  .big-number {
-    font-family: $formular-m;
-    margin-bottom: 0;
-    line-height: 1;
-    @include font-size(4.688);
-  }
+	.big-number {
+		font-family: $formular-m;
+		margin-bottom: 0;
+		line-height: 1;
+		@include font-size(4.688);
+	}
 
-  p {
-    overflow: hidden;
-  }
+	p {
+		overflow: hidden;
+	}
 
-  .more {
-    margin-top: 32px;
-    @include font-size(1);
-  }
+	.more {
+		margin-top: 32px;
+		@include font-size(1);
+	}
 
-  .letter {
-    margin-bottom: 12px;
-  }
+	.letter {
+		margin-bottom: 12px;
+	}
 
-  &.co1 {
-    margin-top: 420px;
-  }
+	&.co1 {
+		margin-top: 420px;
+	}
 
-  &.co2 {
-    margin-top: 340px;
-  }
+	&.co2 {
+		margin-top: 340px;
+	}
 
-  &.co3 {
-    margin-top: 300px;
-  }
+	&.co3 {
+		margin-top: 300px;
+	}
 
-  @include breakpoint(tablet-h) {
-    padding-bottom: 30px;
-    padding-right: 9%;
+	@include breakpoint(tablet-h) {
+		padding-bottom: 30px;
+		padding-right: 9%;
 
-    &.co1 {
-      margin-top: 50px;
-    }
+		&.co1 {
+			margin-top: 50px;
+		}
 
-    &.co2,
-    &.co3 {
-      margin: 96px 0 80px;
-      width: 49%;
-    }
+		&.co2,
+		&.co3 {
+			margin: 96px 0 80px;
+			width: 49%;
+		}
 
-    &.co2 {
-      float: left;
-    }
+		&.co2 {
+			float: left;
+		}
 
-    &.co3 {
-      float: right;
-    }
-  }
+		&.co3 {
+			float: right;
+		}
+	}
 
-  @include breakpoint(menuswap) {
-    &.co2,
-    &.co3 {
-      margin: 0 0 40px;
-    }
-  }
+	@include breakpoint(menuswap) {
+		&.co2,
+		&.co3 {
+			margin: 0 0 40px;
+		}
+	}
 
-  @include breakpoint(phone-h) {
-    padding-bottom: 16px;
-    padding-right: 5%;
+	@include breakpoint(phone-h) {
+		padding-bottom: 16px;
+		padding-right: 5%;
 
-    &.co2,
-    &.co3 {
-      display: block;
-      float: none;
-      margin: 0;
-      width: 100%;
-    }
-  }
+		&.co2,
+		&.co3 {
+			display: block;
+			float: none;
+			margin: 0;
+			width: 100%;
+		}
+	}
 }
